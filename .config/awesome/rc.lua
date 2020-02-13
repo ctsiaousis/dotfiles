@@ -49,14 +49,15 @@ local function run_once(cmd_arr)
     end
 end
 
-run_once({ "urxvtd", "unclutter -root" }) -- entries must be separated by commas
+run_once({ "urxvtd", "mpd", "picom" }) -- entries must be separated by commas
 
 -- This function implements the XDG autostart specification
 awful.spawn.with_shell(
     'if (xrdb -query | grep -q "^awesome\\.started:\\s*true$"); then exit; fi;' ..
     'xrdb -merge <<< "awesome.started:true";' ..
     -- list each of your autostart commands, followed by ; inside single quotes, followed by ..
-    'dex --environment Awesome --autostart --search-paths "$XDG_CONFIG_DIRS/autostart:$XDG_CONFIG_HOME/autostart"' -- https://github.com/jceb/dex
+    'dex --environment Awesome --autostart --search-paths "$XDG_CONFIG_DIRS/autostart:$XDG_CONFIG_HOME/autostart";' .. -- https://github.com/jceb/dex
+    'bash $HOME/.config/awesome/autorun.sh'
 )
 
 -- }}}
@@ -184,7 +185,6 @@ beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv
 -- {{{ Menu
 local myawesomemenu = {
     { "hotkeys", function() return false, hotkeys_popup.show_help end },
-    { "manual", terminal .. " -e man awesome" },
     { "edit config", string.format("%s -e %s %s", terminal, editor, awesome.conffile) },
     { "restart", awesome.restart },
     { "quit", function() awesome.quit() end }
@@ -206,7 +206,7 @@ awful.util.mymainmenu = freedesktop.menu.build({
 --menubar.utils.terminal = terminal -- Set the Menubar terminal for applications that require it
 -- }}}
 
--- {{{ Screen
+--{{{ Screen
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 
 screen.connect_signal("property::geometry", function(s)
@@ -220,6 +220,7 @@ screen.connect_signal("property::geometry", function(s)
         gears.wallpaper.maximized(wallpaper, s, true)
     end
 end)
+
 
 -- Create a wibox for each screen and add it
 awful.screen.connect_for_each_screen(function(s) beautiful.at_screen_connect(s) end)
@@ -243,7 +244,7 @@ globalkeys = my_table.join(
     --Shutdown/Reboot Dmenu script =)
     awful.key({ modkey, "Shift" }, "x", function() os.execute('~/.local/bin/./prompt "Are you sure you wanna shut me?" "shutdown -h now"') end,
               {description = "shutdown script ^.^", group = "awesome"}),
- 
+
     -- X screen locker
     awful.key({ altkey, "Control" }, "l", function () os.execute("~/.Scripts/./lock.sh") end,
               {description = "lock screen", group = "hotkeys"}),
@@ -431,7 +432,7 @@ globalkeys = my_table.join(
             os.execute("pactl set-sink-volume 0 100%")
             beautiful.volume.update()
         end,
-        {description = "volume set to 100%", group = "hotkeys"}),   
+        {description = "volume set to 100%", group = "hotkeys"}),
 	awful.key({ }, "XF86AudioLowerVolume",
         function ()
             os.execute("pactl set-sink-volume 0 -5%")
@@ -564,9 +565,11 @@ clientkeys = my_table.join(
               {description = "close", group = "client"}),
 --    awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                   ,
 --              {description = "toggle floating", group = "client"}),
-    awful.key({modkey, "Control"}, "space",function(c)
-	awful.client.floating.toggle()
-	c.ontop = not c.ontop								     end,
+    awful.key({modkey, "Control"}, "space",
+        function(c)
+            awful.client.floating.toggle()
+            c.ontop = not c.ontop
+        end,
 		{description= "toggle floating", group = "client"}),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
               {description = "move to master", group = "client"}),
@@ -771,7 +774,7 @@ end)
 function border_adjust(c)
     if c.maximized then -- no borders if only 1 client visible
         c.border_width = 0
-    elseif #awful.screen.focused().clients > 1 then
+    elseif #awful.screen.focused().clients >= 1 then
         c.border_width = beautiful.border_width
         c.border_color = beautiful.border_focus
     end
@@ -780,12 +783,20 @@ end
 client.connect_signal("property::maximized", border_adjust)
 client.connect_signal("focus", border_adjust)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+client.connect_signal("property::fullscreen", function(c)
+                                    if c.fullscreen then
+                                        c.shape = gears.shape.rectangle
+                                    else
+                                        c.shape = gears.shape.rounded_rect
+                                    end
+                                end)
 
 -- possible workaround for tag preservation when switching back to default screen:
 -- https://github.com/lcpz/awesome-copycats/issues/251
 -- }}
 
 --AUTOSTART APPLICATIONS
-awful.util.spawn_with_shell("picom")
-awful.util.spawn_with_shell("bash $HOME/.config/awesome/autorun.sh")
+--better use run once, line ~52
+--awful.util.spawn_with_shell("picom")
+--awful.util.spawn_with_shell("bash $HOME/.config/awesome/autorun.sh")
 
