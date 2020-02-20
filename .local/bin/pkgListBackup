@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+[ ! -d "$HOME/.config/myPacks/" ] && exit 
+
+pacman -Qqe > $HOME/.config/myPacks/pacmanPKGList.txt &&
+echo "PACMAN packages done" &&
+pacman -Qqem > $HOME/.config/myPacks/aurPKGList.txt &&
+echo "AUR packages done" 
