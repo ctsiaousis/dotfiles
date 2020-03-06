@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# A UI for detecting and selecting all displays. Probes xrandr for connected
+
+customSpeaker() { #Automated sony speaker connection
+	echo -e "scan on\nconnect 00:42:79:9D:01:7C\n" | bluetoothctl
+}
+
+#start the bluetooth service
+sudo systemctl start bluetooth
+
+# Get user choice for bluetooth connections: 
+chosen=$(printf "My Bluetooth Speaker\\nmanual" | dmenu -i -p "Select Bluetooth Device:") &&
+case "$chosen" in
+	"My Bluetooth Speaker") customSpeaker ;; 
+	"manual") urxvt -e sh -c "bluetoothctl" ;;
+esac
