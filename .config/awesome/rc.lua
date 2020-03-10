@@ -40,27 +40,6 @@ do
 end
 -- }}}
 
--- {{{ Autostart windowless processes
-
--- This function will run once every time Awesome is started
-local function run_once(cmd_arr)
-    for _, cmd in ipairs(cmd_arr) do
-        awful.spawn.with_shell(string.format("pgrep -u $USER -fx '%s' > /dev/null || (%s)", cmd, cmd))
-    end
-end
-
-run_once({ "urxvtd", "mpd", "picom" }) -- entries must be separated by commas
-
--- This function implements the XDG autostart specification
-awful.spawn.with_shell(
-    'if (xrdb -query | grep -q "^awesome\\.started:\\s*true$"); then exit; fi;' ..
-    'xrdb -merge <<< "awesome.started:true";' ..
-    -- list each of your autostart commands, followed by ; inside single quotes, followed by ..
-    'dex --environment Awesome --autostart --search-paths "$XDG_CONFIG_DIRS/autostart:$XDG_CONFIG_HOME/autostart";' .. -- https://github.com/jceb/dex
-    'bash $HOME/.config/awesome/autorun.sh'
-)
-
--- }}}
 
 -- {{{ Variable definitions
 
@@ -507,7 +486,7 @@ globalkeys = my_table.join(
     -- User programs
     awful.key({ modkey }, "q", function () awful.spawn(browser) end,
               {description = "run browser", group = "launcher"}),
-    awful.key({ modkey, "Shift" }, "m", function () awful.util.spawn_with_shell("~/.Scripts/./spotify.sh") end,
+    awful.key({ modkey, "Shift" }, "m", function () awful.util.spawn_with_shell("spotify") end,
               {description = "run Spotify", group = "launcher"}),
     awful.key({ modkey }, "a", function () awful.spawn(guieditor) end,
               {description = "run gui editor", group = "launcher"}),
@@ -794,6 +773,28 @@ client.connect_signal("property::fullscreen", function(c)
 -- possible workaround for tag preservation when switching back to default screen:
 -- https://github.com/lcpz/awesome-copycats/issues/251
 -- }}
+
+-- {{{ Autostart windowless processes
+
+-- This function will run once every time Awesome is started
+local function run_once(cmd_arr)
+    for _, cmd in ipairs(cmd_arr) do
+        awful.spawn.with_shell(string.format("pgrep -u $USER -fx '%s' > /dev/null || (%s)", cmd, cmd))
+    end
+end
+
+run_once({ "urxvtd", "mpd", "picom" }) -- entries must be separated by commas
+
+-- This function implements the XDG autostart specification
+awful.spawn.with_shell(
+    'if (xrdb -query | grep -q "^awesome\\.started:\\s*true$"); then exit; fi;' ..
+    'xrdb -merge <<< "awesome.started:true";' ..
+    -- list each of your autostart commands, followed by ; inside single quotes, followed by ..
+    'dex --environment Awesome --autostart --search-paths "$XDG_CONFIG_DIRS/autostart:$XDG_CONFIG_HOME/autostart";' .. -- https://github.com/jceb/dex
+    'bash $HOME/.config/awesome/autorun.sh'
+)
+
+-- }}}
 
 --AUTOSTART APPLICATIONS
 --better use run once, line ~52
