@@ -211,16 +211,27 @@ local bat = lain.widget.bat({
         if bat_now.status and bat_now.status ~= "N/A" then
             if bat_now.ac_status == 1 then
                 baticon:set_image(theme.widget_ac)
-            elseif not bat_now.perc and tonumber(bat_now.perc) <= 5 then
+            elseif not bat_now.perc and tonumber(bat_now.perc) <= 10 then
                 baticon:set_image(theme.widget_battery_empty)
-            elseif not bat_now.perc and tonumber(bat_now.perc) <= 15 then
+            elseif not bat_now.perc and tonumber(bat_now.perc) <= 30 then
                 baticon:set_image(theme.widget_battery_low)
             else
                 baticon:set_image(theme.widget_battery)
             end
-            widget:set_markup(markup.font(theme.font, " " .. bat_now.perc .. "% "))
+
+            if not bat_now.perc and tonumber(bat_now.perc) <= 10 then
+                color = "#FF0000"
+            elseif not bat_now.perc and tonumber(bat_now.perc) <= 30 then
+                color = "#FFA31A"
+            elseif not bat_now.perc and tonumber(bat_now.perc) <= 60 then
+                color = "#E6E600"
+            else
+                color = "#00FF00"
+            end
+
+            widget:set_markup(markup.font(theme.font,markup(color,  " " .. bat_now.perc .. "% ")))
         else
-            widget:set_markup(markup.font(theme.font, " AC "))
+            widget:set_markup(markup.font(theme.font,markup("#00FF00", "" .. " AC " .. " ")))
             baticon:set_image(theme.widget_ac)
         end
     end
