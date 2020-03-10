@@ -49,3 +49,5 @@ URxvt.saveLines: 2000
 URxvt.scrollBar: false
 URxvt.cursorColor: white
 URxvt.perl-ext-common:  ...,resize-font,...
+
+Xcursor.size: 20

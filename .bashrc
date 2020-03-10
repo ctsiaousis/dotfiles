@@ -128,7 +128,7 @@ alias cpush='config push https://github.com/ctsiaousis/dotfiles.git master --for
 alias aws='cd ~/.config/awesome && ls -a'
 alias yta='youtube-dl -x --audio-format mp3 --add-metadata'
 alias batt='watch -n0 cat /sys/class/power_supply/BAT0/capacity'
-alias wiki='firefox --new-window file:///usr/share/doc/arch-wiki/html/en/List_of_applications.html'
+alias wiki='firefox --new-window file:///usr/share/doc/arch-wiki/html/en/List_of_applications.html &'
 alias ls='ls -hN --color=auto --group-directories-first'
 alias p='sudo pacman'
 alias SS='sudo systemctl'
