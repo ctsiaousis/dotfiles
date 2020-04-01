@@ -1,2 +1,1 @@
-export ZROOTDIR="$HOME/.config/zsh"
-
+source $ZDOTDIR/.zprofile

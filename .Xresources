@@ -1,40 +1,39 @@
 ! special
-*.foreground:   #93a1a1
-*.background:   #001c24
-*.cursorColor:  #93a1a1
+*.foreground:   #a2a2a2
+*.background:   #281919
+*.cursorColor:  #a2a2a2
 
 ! black
-*.color0:       #002b36
-*.color8:       #657b83
+*.color0:       #555555
+*.color8:       #888888
 
-! ! red
-*.color1:       #dc322f
-*.color9:       #dc322f
-!
-! ! green
-*.color2:       #859900
-*.color10:      #859900
-!
-! ! yellow
-*.color3:       #b58900
-*.color11:      #b58900
-!
-! ! blue
-*.color4:       #268bd2
-*.color12:      #268bd2
-!
-! ! magenta
-*.color5:       #6c71c4
-*.color13:      #6c71c4
-!
-! ! cyan
-*.color6:       #2aa198
-*.color14:      #2aa198
-!
-! ! white
-*.color7:       #93a1a1
-*.color15:      #fdf6e3
-!
+! red
+*.color1:       #9c3528
+*.color9:       #d64937
+
+! green
+*.color2:       #61bc3b
+*.color10:      #86df5d
+
+! yellow
+*.color3:       #f3b43a
+*.color11:      #fdd75a
+
+! blue
+*.color4:       #0d68a8
+*.color12:      #0f75bd
+
+! magenta
+*.color5:       #744560
+*.color13:      #9e5e83
+
+! cyan
+*.color6:       #288e9c
+*.color14:      #37c3d6
+
+! white
+*.color7:       #a2a2a2
+*.color15:      #f9f9f9
 
 URxvt*imLocale: en_US.UTF-8
 URxvt*termName: rxvt-unicode-256color
