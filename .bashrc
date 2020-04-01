@@ -95,7 +95,7 @@ unset use_color safe_term match_lhs sh
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
-
+alias dcd='cd "$(ls -d */ | dmenu -fn glisp -nb "#100" -nf "#b9c0af" -sb "#000" -sf "#afff2f" -i)"'
 alias more=less
 
 xhost +local:root > /dev/null 2>&1
@@ -116,9 +116,9 @@ shopt -s expand_aliases
 shopt -s histappend
 
 #Source Xresources
-#xrdb -merge ~/.Xresources
+xrdb -merge ~/.Xresources
 
-neofetch
+neofetch | lolcat
 
 [[ -f ~/.bash_profile ]] && . ~/.bash_profile
 alias wif='sudo wifi-menu'

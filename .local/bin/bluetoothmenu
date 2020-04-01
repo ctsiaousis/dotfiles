@@ -3,9 +3,10 @@
 # A UI for detecting and selecting all displays. Probes xrandr for connected
 MAC_ADDRESS="00:42:79:9D:01:7C"
 customSpeaker() { #Automated sony speaker connection
-	echo -e "scan on\nconnect ${MAC_ADDRESS}\n" | bluetoothctl &&
+	echo -e "scan on\nconnect ${MAC_ADDRESS}\n" | bluetoothctl && sleep 5 &&
 		bluetoothctl info ${MAC_ADDRESS} | grep 'Connected: yes' &&
-		notify-send MyBluetoothScript '<i>connected to speaker</i>'
+		notify-send "MyBluetoothScript" "<i>connected to speaker</i>" &&
+		exit
 }
 
 #start the bluetooth service

@@ -23,15 +23,15 @@ theme.fg_urgent                                 = "#CC9393"
 theme.bg_normal                                 = "#1A1A1A"
 theme.bg_focus                                  = "#313131"
 theme.bg_urgent                                 = "#1A1A1A"
-theme.border_width                              = 3
+theme.border_width                              = 2
 theme.border_normal                             = "#3F3F3F"
-theme.border_focus                              = "#155998"
+theme.border_focus                              = "#f5742d" --"#155998"
 theme.border_marked                             = "#155998"
 theme.tasklist_bg_focus                         = "#1A1A1A"
 theme.titlebar_bg_focus                         = theme.bg_focus
 theme.titlebar_bg_normal                        = theme.bg_normal
 theme.titlebar_fg_focus                         = theme.fg_focus
-theme.menu_height                               = 16
+theme.menu_height                               = 18
 theme.menu_width                                = 140
 theme.menu_submenu_icon                         = theme.dir .. "/icons/submenu.png"
 theme.taglist_squares_sel                       = theme.dir .. "/icons/square_sel.png"
@@ -86,6 +86,7 @@ theme.titlebar_maximized_button_focus_active    = theme.dir .. "/icons/titlebar/
 theme.titlebar_maximized_button_normal_active   = theme.dir .. "/icons/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_inactive  = theme.dir .. "/icons/titlebar/maximized_focus_inactive.png"
 theme.titlebar_maximized_button_normal_inactive = theme.dir .. "/icons/titlebar/maximized_normal_inactive.png"
+theme.awesome_icon                              = theme.dir .. "/icons/awesome.png"
 
 local markup = lain.util.markup
 local separators = lain.util.separators
@@ -95,15 +96,16 @@ local clockicon = wibox.widget.imagebox(theme.widget_clock)
 local clock = awful.widget.watch(
     "date +'%a %d %b %R'", 60,
     function(widget, stdout)
-        widget:set_markup(" " .. markup.font(theme.font, stdout))
+        widget:set_markup(" " .. markup.font(theme.font, markup("#f5742d", stdout) ))
     end
 )
 
 -- Calendar
 theme.cal = lain.widget.cal({
     attach_to = { clock },
+    three    = true,
     notification_preset = {
-        font = "Monospace 10",
+        font = theme.font,
         fg   = theme.fg_normal,
         bg   = theme.bg_normal
     }
@@ -172,7 +174,7 @@ theme.mpd = lain.widget.mpd({
 local memicon = wibox.widget.imagebox(theme.widget_mem)
 local mem = lain.widget.mem({
     settings = function()
-        widget:set_markup(markup.font(theme.font, " " .. mem_now.used .. "MB "))
+        widget:set_markup(markup.font(theme.font,markup("#da994f", " " .. mem_now.used .. "MB ")))
     end
 })
 
@@ -188,7 +190,7 @@ local cpu = lain.widget.cpu({
 local tempicon = wibox.widget.imagebox(theme.widget_temp)
 local temp = lain.widget.temp({
     settings = function()
-        widget:set_markup(markup.font(theme.font, " " .. coretemp_now .. "°C "))
+        widget:set_markup(markup.font(theme.font,markup("#FF0066", " " .. coretemp_now .. "°C ")))
     end
 })
 
@@ -219,19 +221,19 @@ local bat = lain.widget.bat({
                 baticon:set_image(theme.widget_battery)
             end
 
-            if not bat_now.perc and tonumber(bat_now.perc) <= 10 then
-                color = "#FF0000"
-            elseif not bat_now.perc and tonumber(bat_now.perc) <= 30 then
-                color = "#FFA31A"
-            elseif not bat_now.perc and tonumber(bat_now.perc) <= 60 then
-                color = "#E6E600"
+            if not bat_now.perc and tonumber(bat_now.perc) <= 15 then
+                colorFont   = "#FF0000"
+            elseif not bat_now.perc and tonumber(bat_now.perc) <= 35 then
+                colorFont   = "#FFA31A"
+            elseif not bat_now.perc and tonumber(bat_now.perc) <= 65 then
+                colorFont   = "#E6E600"
             else
-                color = "#00FF00"
+                colorFont   = "#00FF00"
             end
 
-            widget:set_markup(markup.font(theme.font,markup(color,  " " .. bat_now.perc .. "% ")))
+            widget:set_markup(markup.font(theme.font,markup(colorFont,  " " .. bat_now.perc .. "% ")))
         else
-            widget:set_markup(markup.font(theme.font,markup("#00FF00", "" .. " AC " .. " ")))
+            widget:set_markup(markup.font(theme.font,markup(colorFont, "" .. " AC " .. " ")))
             baticon:set_image(theme.widget_ac)
         end
     end
@@ -251,7 +253,7 @@ theme.volume = lain.widget.alsa({
             volicon:set_image(theme.widget_vol)
         end
 
-        widget:set_markup(markup.font(theme.font, " " .. volume_now.level .. "% "))
+        widget:set_markup(markup.font(theme.font,markup("#6ccbdf", " " .. volume_now.level .. "% ")))
     end
 })
 
@@ -303,7 +305,7 @@ function theme.at_screen_connect(s)
     s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons)
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 18, bg = theme.bg_normal, fg = theme.fg_normal })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 20, bg = theme.bg_normal, fg = theme.fg_normal })
 
     -- Add widgets to the wibox
     s.mywibox:setup {

@@ -31,7 +31,9 @@ tty-clock
 uefi-shell-git
 unimatrix-git
 urxvt-resize-font-git
+virtio-win
 wd719x-firmware
 woeusb
 xorg-server-xdmx
 yay
+zoom
