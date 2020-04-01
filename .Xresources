@@ -46,9 +46,10 @@ URxvt.font:	xft:Anka/Coder:pixelsize=18, \
 URxvt.saveLines: 2000
 URxvt.scrollBar: false
 URxvt.cursorColor: white
-URxvt.perl-ext-common:  default,matcher,clipboard,resize-font,...
-!to copy-paste on primary and clipboard!
-URxvt.clipboard.autocopy: true
+URxvt.perl-ext-common:  default,matcher,resize-font,...
+
+!to copy-paste on primary and clipboard! nees clipboard pearl extention
+!URxvt.clipboard.autocopy: true
 !URxvt.keysym.M-c: perl:clipboard:copy
 !URxvt.keysym.M-v: perl:clipboard:paste
 
