@@ -1,0 +1,34 @@
+#!/bin/bash
+
+function config {
+  echo $2
+  /usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME &>/dev/null
+}
+
+
+config add $HOME/.Xresources ; 
+config add $HOME/.bashrc ; 
+config add $HOME/.vimrc ; 
+config add $HOME/.xinitrc ;
+config add $HOME/.zshrc ;
+config add $HOME/.xprofile ; 
+config add $HOME/.zprofile ; 
+config add $HOME/.local/bin/. ; 
+config add $HOME/.config/awesome/\* ; 
+config add $HOME/.config/conky/\* ;
+config add $HOME/.config/mpv/\* ;
+config add $HOME/.config/myPacks/\* ;
+config add $HOME/.config/neofetch/\* ;
+config add $HOME/.config/newsboat/. ;
+config add $HOME/.config/picom/\* ;
+config add $HOME/.config/ranger/\* ;
+config add $HOME/.config/zathura/\* ;
+config add $HOME/.config/zsh/\* ;
+
+echo "Added all dotfiles. Now give a commit note"
+
+#config commit -m $(read) &&
+
+#/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME push https://github.com/ctsiaousis/dotfiles.git master --force &&
+#	echo "..Done!" && exit
+
