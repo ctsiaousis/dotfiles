@@ -97,10 +97,13 @@ alias wiki='firefox --new-window file:///usr/share/doc/arch-wiki/html/en/List_of
 alias ls='ls -hN --color=auto --group-directories-first'
 alias p='sudo pacman'
 alias SS='sudo systemctl'
+alias neofetch='neofetch | sed "s/with Radeon Vega Mobile Gfx @/@/g"'
 #           ----------------------------------------------------------------------------------------
 
 #Source Xresources
 xrdb -merge $HOME/.Xresources
+#print system info
+neofetch | lolcat
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
