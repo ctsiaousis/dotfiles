@@ -1,6 +1,3 @@
- dmenu binary prompt script.
-# Gives a dmenu prompt labeled with $1 to perform command $2.
-# For example:
-# `./prompt "Do you want to shutdown?" "shutdown -h now"`
+#!/usr/bin/env sh
 
-[ "$(printf "Shutdown\\nReboot" | dmenu -i -p "$1" -nb darkred -sb red -sf white -nf gray )" = "Shutdown" ] && ( [ "$(printf "No\\nYes" | dmenu -i -p "$2" -nb darkred -sb red -sf white -nf gray )" = "Yes" ] && shutdown -h now) || reboot
+[ "$(printf "Shutdown\\nReboot" | dmenu -i -p "What do you wish?" -nb darkred -sb red -sf white -nf gray )" = "Shutdown" ] && ( [ "$(printf "No\\nYes" | dmenu -i -p "$2" -nb darkred -sb red -sf white -nf gray )" = "Yes" ] && shutdown -h now) || reboot

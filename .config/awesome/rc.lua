@@ -394,9 +394,9 @@ globalkeys = my_table.join(
               {description = "show weather", group = "widgets"}),
 
     -- Brightness
-    awful.key({ }, "XF86MonBrightnessUp", function () os.execute("sudo light -A 5") end,
+    awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn.with_shell('$HOME/.local/bin/brightnessNotify +5') end,
               {description = "+10%", group = "hotkeys"}),
-    awful.key({ }, "XF86MonBrightnessDown", function () os.execute("sudo light -U 5") end,
+    awful.key({ }, "XF86MonBrightnessDown", function () awful.spawn.with_shell('$HOME/.local/bin/brightnessNotify -5') end,
               {description = "-10%", group = "hotkeys"}),
 
     -- ALSA volume control

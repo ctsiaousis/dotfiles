@@ -29,6 +29,7 @@ dhcpcd
 dia
 dialog
 dmenu
+dmidecode
 dnsmasq
 doxygen
 ebtables
@@ -66,8 +67,8 @@ jsoncpp
 kdb
 laptop-mode-tools
 libgphoto2
+libgsf
 libnet
-libreoffice-extension-texmaths
 libreoffice-extension-writer2latex
 libreoffice-still
 libuv
@@ -109,6 +110,7 @@ pacman-contrib
 pamixer
 paper-icon-theme-git
 patch
+paxtest
 pgadmin4
 picom
 pkgconf

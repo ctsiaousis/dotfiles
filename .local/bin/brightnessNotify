@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo $1
+
+[[ $1 =~ ^-[0-9]+$ ]] && $(sudo light -U ${1//-}) || $(sudo light -A ${1//+})
+
+notify-send "Brightness Updated" "with value: $(printf '%.f\n' $(light -G))"
+
