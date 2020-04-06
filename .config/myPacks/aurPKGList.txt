@@ -8,6 +8,7 @@ gtypist
 informant
 interbench
 laptop-mode-tools
+libxft-bgra
 lightdm-webkit-theme-aether
 linux-ck
 ncurses5-compat-libs
@@ -26,6 +27,7 @@ tor-browser
 ttf-anka-coder
 ttf-iosevka
 ttf-material-design-icons-git
+ttf-symbola
 ttf-typicons
 tty-clock
 uefi-shell-git

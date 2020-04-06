@@ -51,6 +51,7 @@ gphoto2
 gphotofs
 grub
 gtypist
+gvim
 hdparm
 htop
 i3lock
@@ -73,6 +74,7 @@ libreoffice-extension-writer2latex
 libreoffice-still
 libuv
 libvirt
+libxft-bgra
 light
 lightdm
 lightdm-gtk-greeter
@@ -159,11 +161,14 @@ tldr
 tor-browser
 transmission-gtk
 ttf-anka-coder
+ttf-arphic-uming
 ttf-font-awesome
+ttf-indic-otf
 ttf-iosevka
 ttf-material-design-icons-git
 ttf-roboto
 ttf-sazanami
+ttf-symbola
 ttf-typicons
 ttf-ubuntu-font-family
 tty-clock
@@ -176,7 +181,6 @@ unzip
 urxvt-resize-font-git
 usbutils
 vi
-vim
 virt-manager
 virtio-win
 virtualbox-guest-iso

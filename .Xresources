@@ -38,14 +38,22 @@
 URxvt*imLocale: en_US.UTF-8
 URxvt*termName: rxvt-unicode-256color
 Urxvt*buffered: false
+URxvt*skipBuiltinGlyphs: true
 URxvt.intensityStyles: false
 URxvt.font:	xft:Anka/Coder:pixelsize=18, \
 		xft:FuraMono Nerd Font:size=13, \
-		xft:Monofur Nerd Font:pixelsize=18
+		xft:Monofur Nerd Font:pixelsize=18 \
+		xft:Symbola:minspace=False \
+		xft:Noto Emoji:minspace=False
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+URxvt.letterSpace: 0
 URxvt.saveLines: 2000
 URxvt.scrollBar: false
-URxvt.cursorColor: white
-URxvt.perl-ext-common:  default,matcher,resize-font,...
+URxvt.cursorColor: green
+URxvt.perl-ext-common:  default,matcher,resize-font
 
 !to copy-paste on primary and clipboard! nees clipboard pearl extention
 !URxvt.clipboard.autocopy: true

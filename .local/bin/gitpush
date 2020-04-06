@@ -19,6 +19,7 @@ config add $HOME/.config/myPacks/. ;
 config add $HOME/.config/neofetch/. ;
 config add $HOME/.config/newsboat/. ;
 config add $HOME/.config/picom/. ;
+config add $HOME/.config/homepage/. ;
 config add $HOME/.config/ranger/. ;
 config add $HOME/.config/zathura/. ;
 config add $HOME/.config/zsh/. ;
