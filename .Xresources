@@ -43,8 +43,8 @@ URxvt.intensityStyles: false
 URxvt.font:	xft:Anka/Coder:pixelsize=18, \
 		xft:FuraMono Nerd Font:size=13, \
 		xft:Monofur Nerd Font:pixelsize=18 \
-		xft:Symbola:minspace=False \
-		xft:Noto Emoji:minspace=False
+		xft:Noto Emoji:minspace=False \
+		xft:joypixels:minspace=False
 Xft.antialias: true
 Xft.rgba: rgb
 Xft.hinting: true

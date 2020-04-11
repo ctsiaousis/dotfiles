@@ -8,12 +8,12 @@ function config {
 
 config add $HOME/.Xresources ; 
 config add $HOME/.bashrc ; 
-config add $HOME/.vimrc ; 
 config add $HOME/.xinitrc ;
 config add $HOME/.xprofile ; 
 config add $HOME/.local/bin/. ; 
 config add $HOME/.config/awesome/. ; 
 config add $HOME/.config/conky/. ;
+config add $HOME/.config/vim/. ;
 config add $HOME/.config/mpv/. ;
 config add $HOME/.config/myPacks/. ;
 config add $HOME/.config/neofetch/. ;

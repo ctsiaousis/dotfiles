@@ -6,6 +6,7 @@ gotop-bin
 gphotofs
 gtypist
 informant
+instagram-scraper
 interbench
 laptop-mode-tools
 libxft-bgra
@@ -14,6 +15,7 @@ linux-ck
 ncurses5-compat-libs
 otf-san-francisco
 paper-icon-theme-git
+picom-tryone-git
 plymouth-git
 plymouth-theme-arch-charge
 popcorntime-bin

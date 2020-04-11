@@ -1,7 +1,8 @@
-#!/usr/bin/env bash
-#picom
+#!/bin/bash
+
+picom --experimental-backends &
+$HOME/.local/bin/processgraph &
+urxvtd &
+mpd &
+conky && killall -SIGUSR1 conky && conky &
 setxkbmap us,gr -option grp:alt_caps_toggle,grp_led:scroll &
-/home/kalikanjaro/.local/bin/./processgraph &
-conky &&
-killall -SIGUSR1 conky &&
-conky &

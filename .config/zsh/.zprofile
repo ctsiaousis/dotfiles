@@ -16,6 +16,17 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 
+#ZSH history
+export HISTFILE="$XDG_DATA_HOME"/zsh/history
+
+#VIM change root directory
+export VIMINIT=":source $XDG_CONFIG_HOME"/vim/vimrc
+
+#less history file
+export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
+
+#
+export ncmpcpp_directory="$XDG_CONFIG_HOME/ncmpcpp"
 #nodejs settings
 PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix=~/.node_modules

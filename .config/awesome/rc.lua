@@ -225,7 +225,7 @@ globalkeys = my_table.join(
               {description = "shutdown script ^.^", group = "awesome"}),
 
     -- X screen locker
-    awful.key({ altkey, "Control" }, "l", function () os.execute("~/.Scripts/./lock.sh") end,
+    awful.key({ altkey, "Control" }, "l", function () os.execute("~/.config/awesome/./lock.sh") end,
               {description = "lock screen", group = "hotkeys"}),
 
     -- Hotkeys
@@ -385,14 +385,7 @@ globalkeys = my_table.join(
     awful.key({ modkey, }, "z", function () awful.screen.focused().quake:toggle() end,
               {description = "dropdown application", group = "launcher"}),
 
-    -- Widgets popups
-    awful.key({ altkey, }, "c", function () if beautiful.cal then beautiful.cal.show(7) end end,
-              {description = "show calendar", group = "widgets"}),
-    awful.key({ altkey, }, "h", function () if beautiful.fs then beautiful.fs.show(7) end end,
-              {description = "show filesystem", group = "widgets"}),
-    awful.key({ altkey, }, "w", function () if beautiful.weather then beautiful.weather.show(7) end end,
-              {description = "show weather", group = "widgets"}),
-
+    -- 
     -- Brightness
     awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn.with_shell('$HOME/.local/bin/brightnessNotify +5') end,
               {description = "+10%", group = "hotkeys"}),
@@ -783,14 +776,13 @@ local function run_once(cmd_arr)
     end
 end
 
-run_once({ "urxvtd", "mpd", "picom" }) -- entries must be separated by commas
+run_once({ "notify-send LOADED" }) -- entries must be separated by commas
 
 -- This function implements the XDG autostart specification
 awful.spawn.with_shell(
     'if (xrdb -query | grep -q "^awesome\\.started:\\s*true$"); then exit; fi;' ..
     'xrdb -merge <<< "awesome.started:true";' ..
     -- list each of your autostart commands, followed by ; inside single quotes, followed by ..
-    'dex --environment Awesome --autostart --search-paths "$XDG_CONFIG_DIRS/autostart:$XDG_CONFIG_HOME/autostart";' .. -- https://github.com/jceb/dex
     'bash $HOME/.config/awesome/autorun.sh'
 )
 

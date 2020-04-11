@@ -57,6 +57,7 @@ htop
 i3lock
 inetutils
 informant
+instagram-scraper
 interbench
 java-environment-common
 java-runtime-common
@@ -103,6 +104,7 @@ neofetch
 netctl
 newsboat
 nodejs
+noto-fonts-emoji
 npm
 ntfs-3g
 ntp
@@ -114,7 +116,7 @@ paper-icon-theme-git
 patch
 paxtest
 pgadmin4
-picom
+picom-tryone-git
 pkgconf
 plymouth-git
 plymouth-theme-arch-charge
@@ -128,6 +130,7 @@ pulseaudio-alsa
 pulseaudio-bluetooth
 pulseaudio-jack
 pulsemixer
+python-pip
 python-ueberzug
 qemu
 ranger-git
@@ -165,6 +168,7 @@ ttf-arphic-uming
 ttf-font-awesome
 ttf-indic-otf
 ttf-iosevka
+ttf-joypixels
 ttf-material-design-icons-git
 ttf-roboto
 ttf-sazanami
