@@ -385,29 +385,40 @@ globalkeys = my_table.join(
     awful.key({ modkey, }, "z", function () awful.screen.focused().quake:toggle() end,
               {description = "dropdown application", group = "launcher"}),
 
-    -- 
+    --
     -- Brightness
-    awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn.with_shell('$HOME/.local/bin/brightnessNotify +5') end,
-              {description = "+10%", group = "hotkeys"}),
-    awful.key({ }, "XF86MonBrightnessDown", function () awful.spawn.with_shell('$HOME/.local/bin/brightnessNotify -5') end,
-              {description = "-10%", group = "hotkeys"}),
+    awful.key({ }, "XF86MonBrightnessUp",
+                function ()
+                    naughty.destroy_all_notifications(nil,nil)
+                    awful.spawn.with_shell('$HOME/.local/bin/brightnessNotify +5')
+                end,
+            {description = "+10%", group = "hotkeys"}),
+    awful.key({ }, "XF86MonBrightnessDown",
+                function ()
+                    naughty.destroy_all_notifications(nil,nil)
+                    awful.spawn.with_shell('$HOME/.local/bin/brightnessNotify -5')
+                end,
+            {description = "-10%", group = "hotkeys"}),
 
     -- ALSA volume control
     awful.key({ }, "XF86AudioRaiseVolume",
         function ()
-            os.execute("pactl set-sink-volume 0 +5%")
+            naughty.destroy_all_notifications(nil,nil)
+            awful.spawn.with_shell('$HOME/.local/bin/audioNotify +5')
             beautiful.volume.update()
         end,
         {description = "volume up", group = "hotkeys"}),
  	awful.key({ modkey }, "XF86AudioLowerVolume",
         function ()
+            naughty.destroy_all_notifications(nil,nil)
             os.execute("pactl set-sink-volume 0 100%")
             beautiful.volume.update()
         end,
         {description = "volume set to 100%", group = "hotkeys"}),
 	awful.key({ }, "XF86AudioLowerVolume",
         function ()
-            os.execute("pactl set-sink-volume 0 -5%")
+            naughty.destroy_all_notifications(nil,nil)
+            awful.spawn.with_shell('$HOME/.local/bin/audioNotify -5')
             beautiful.volume.update()
         end,
         {description = "volume down", group = "hotkeys"}),

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo $1
-
 [[ $1 =~ ^-[0-9]+$ ]] && $(sudo light -U ${1//-}) || $(sudo light -A ${1//+})
 
-notify-send "Brightness Updated" "with value: $(printf '%.f\n' $(light -G))"
+title=$(echo "Brightness Updated")
+
+notify-send -i $HOME/.face "$title" "with value: <span color='#57dafd' font='26px'><i><b>$(printf '%.f\n' $(light -G))</b></i></span>" -u low -t 2000
 

@@ -1,0 +1,17 @@
+#!/bin/bash
+# My script for managing my glorious 
+#
+[[ $1 =~ ^-[0-9]+$ ]] && $(pulsemixer --change-volume ${1}) || $(pulsemixer --change-volume ${1})
+
+vol=$(pulsemixer --get-volume | cut -d " " -f1)
+
+[[ $vol -eq "0" ]] && notify-send -i $HOME/.local/share/myIcons/sound_0.png " " -t 2000 ;
+[[ $vol -gt "0"  && $vol -lt "21" ]] && notify-send -i $HOME/.local/share/myIcons/sound_1.png " " -t 2000 ;
+[[ $vol -gt "20" && $vol -lt "36" ]] && notify-send -i $HOME/.local/share/myIcons/sound_2.png " " -t 2000 ;
+[[ $vol -gt "35" && $vol -lt "51" ]] && notify-send -i $HOME/.local/share/myIcons/sound_3.png " " -t 2000 ;
+[[ $vol -gt "50" && $vol -lt "71" ]] && notify-send -i $HOME/.local/share/myIcons/sound_4.png " " -t 2000 ;
+[[ $vol -gt "70" && $vol -lt "86" ]] && notify-send -i $HOME/.local/share/myIcons/sound_5.png " " -t 2000 ;
+[[ $vol -gt "85" ]] && notify-send -i $HOME/.local/share/myIcons/sound_6.png " " -t 2000 ;
+
+echo done
+

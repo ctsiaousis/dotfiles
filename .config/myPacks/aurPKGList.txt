@@ -9,7 +9,9 @@ informant
 instagram-scraper
 interbench
 laptop-mode-tools
+libnotify-id
 libxft-bgra
+light-git
 lightdm-webkit-theme-aether
 linux-ck
 ncurses5-compat-libs

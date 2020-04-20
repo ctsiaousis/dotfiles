@@ -76,29 +76,6 @@ bindkey '^e' edit-command-line
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
-#my aliases ----------------------------------------------------------------------------------------
-alias cp="cp -i"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-alias dcd='cd "$(ls -d */ | dmenu -fn glisp -nb "#100" -nf "#b9c0af" -sb "#000" -sf "#afff2f" -i)"'
-alias more=less
-alias ls='ls --color=auto'
-alias grep='grep --colour=auto'
-alias egrep='egrep --colour=auto'
-alias fgrep='fgrep --colour=auto'
-alias wif='sudo wifi-menu'
-alias lockme='scrot /tmp/screenshot.png && convert /tmp/screenshot.png -blur 0x5 /tmp/screenshotblur.png && i3lock -i /tmp/screenshotblur.png'
-alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
-alias cpush='config push https://github.com/ctsiaousis/dotfiles.git master --force'
-alias aws='cd ~/.config/awesome && ls -a'
-alias yta='youtube-dl -x --audio-format mp3 --add-metadata'
-alias batt='watch -n0 cat /sys/class/power_supply/BAT0/capacity'
-alias wiki='firefox --new-window file:///usr/share/doc/arch-wiki/html/en/List_of_applications.html &'
-alias ls='ls -hN --color=auto --group-directories-first'
-alias p='sudo pacman'
-alias SS='sudo systemctl'
-alias neofetch='neofetch | sed "s/with Radeon Vega Mobile Gfx @/@/g"'
-#           ----------------------------------------------------------------------------------------
 
 #Source Xresources
 xrdb -merge $HOME/.Xresources
