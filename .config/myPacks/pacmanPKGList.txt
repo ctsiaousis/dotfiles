@@ -15,12 +15,15 @@ arduino-docs
 asciiquarium
 autoconf
 automake
+awesome-freedesktop-git
 awesome-git
 base
 bc
 bibata-cursor-theme
 binutils
 bison
+blender
+blueman
 bluez-utils
 brave-bin
 cmake
@@ -131,6 +134,7 @@ pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
 pulseaudio-jack
+pulseeffects
 pulsemixer
 python-pip
 python-ueberzug
@@ -138,7 +142,7 @@ qemu
 ranger-git
 redshift
 rhash
-rofi
+rofi-git
 rsync
 rxvt-unicode
 scrot
@@ -184,6 +188,7 @@ uefi-shell-git
 unimatrix-git
 unrar
 unzip
+upower
 urxvt-resize-font-git
 usbutils
 vi
@@ -196,9 +201,11 @@ wd719x-firmware
 woeusb
 wpa_supplicant
 xclip
+xdg-user-dirs
 xf86-input-synaptics
 xf86-video-amdgpu
 xf86-video-vesa
+xfce4-power-manager
 xmlto
 xorg-bdftopcf
 xorg-docs

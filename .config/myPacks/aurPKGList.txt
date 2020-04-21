@@ -1,4 +1,5 @@
 aic94xx-firmware
+awesome-freedesktop-git
 awesome-git
 bibata-cursor-theme
 brave-bin
@@ -24,6 +25,7 @@ popcorntime-bin
 pscircle
 python-ueberzug
 ranger-git
+rofi-git
 spotblock-git
 spotify
 sublime-text-dev
