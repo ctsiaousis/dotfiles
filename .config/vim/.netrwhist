@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/kalikanjaro/.local/bin'
 let g:netrw_dirhist_5='/home/kalikanjaro/.config/mpv/script-opts'
 let g:netrw_dirhist_4='/home/kalikanjaro/.config/homepage'
 let g:netrw_dirhist_3='/home/kalikanjaro/docs/the-glorious-dotfiles/config/awesome/floppy/theme'

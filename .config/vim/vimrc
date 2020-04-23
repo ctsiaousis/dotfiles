@@ -15,3 +15,28 @@ set softtabstop=8
 set shiftwidth=8
 set noexpandtab
 set whichwrap=b,s,<,>,[,]
+
+
+" Real Playin
+" ------------------SPLITS--------------------
+set splitbelow splitright
+" Remap splits navigation to just CTRL + hjkl
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Make adjusing split sizes a bit more friendly
+"noremap <silent> <C-Left> :vertical resize +3<CR>
+"noremap <silent> <C-Right> :vertical resize -3<CR>
+"noremap <silent> <C-Up> :resize +3<CR>
+"noremap <silent> <C-Down> :resize -3<CR>
+
+" Change 2 split windows from vert to horiz or horiz to vert
+map <Leader>th <C-w>t<C-w>H
+map <Leader>tk <C-w>t<C-w>K
+
+" Spawn a terminal bellow
+map <F2> :terminal
+
+" ------------------/SPLITS--------------------

@@ -15,13 +15,13 @@ return {
 		network_manager 								= 'urxvt -e sudo wifi-menu',					-- Network manager
 		bluetooth_manager 								= 'blueman-manager',						-- Bluetooth manager
 		power_manager 									= 'xfce4-power-manager',					-- Power manager
-		package_manager 								= 'pamac-manager',							-- GUI Package manager
+		package_manager 								= 'pacman',							-- GUI Package manager
 		lock 											= 'awesome-client "_G.show_lockscreen()"',  -- Lockscreen
-		quake 											= 'kitty --name QuakeTerminal',             -- Quake-like Terminal
+		quake 											= 'urxvt',             -- Quake-like Terminal
 
-		rofiweb											= 'rofi -dpi ' .. screen.primary.dpi ..
-														  ' -show Search -modi Search:' .. config_dir ..
-														  '/configuration/rofi/sidebar/rofi-web-search.py' ..
+		rofiglobal										= 'rofi -dpi ' .. screen.primary.dpi ..
+														  ' -show "Global Search" -modi "Global Search":' .. config_dir ..
+														  '/configuration/rofi/sidebar/rofi-spotlight.sh' ..
 														  ' -theme ' .. config_dir ..
 														  '/configuration/rofi/sidebar/rofi.rasi', 	-- Rofi Web Search
 

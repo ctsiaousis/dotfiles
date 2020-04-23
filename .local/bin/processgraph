@@ -3,32 +3,53 @@
 set -e
 
 mkdir -p /tmp/wallpaper
+waldir="$HOME/.config/awesome/theme/wallpapers"
+curwall="/tmp/wallpaper/curwall"
+
+choosewall() {
+	case "$(date +"%H" | sed 's/0//')" in
+		[1-6]) echo "$waldir/midnight-wallpaper.png" > $curwall;;
+		[7-12]) echo "$waldir/morning-wallpaper.png" > $curwall;;
+		[13-18]) echo "$waldir/noon-wallpaper.png" > $curwall;;
+		[19-0]) echo "$waldir/night-wallpaper.png" > $curwall;;
+	esac
+
+	echo "the wall is now $curwall"
+}
+
+
+draw() {
+	pscircle --output=/tmp/wallpaper/wall${i}.png \
+		--background-color=1e2226 \
+		--link-color-min=081331 \
+		--link-color-min=224875 \
+		--dot-color-max=f57402 \
+		--dot-color-min=165a99 \
+		--dot-radius=7 \
+		--tree-font-size=30 \
+		--tree-font-color=ffff00 \
+		--tree-font-face="3270Medium Nerd Font Mono" \
+		--cpulist-show=0 \
+		--memlist-show=0 \
+		--cpu-min-value=5 \
+		--toplists-row-height=0 \
+		--toplists-font-size=0 \
+		--toplists-bar-height=0 \
+		--toplists-bar-background=444444 \
+		--toplists-bar-color=7d54dd \
+		--background-image=$(cat $curwall) 
+}
+
 i=1
 while [ true ]
 do
-pscircle --output=/tmp/wallpaper/wall${i}.png \
-	--background-color=1e2226 \
-	--link-color-min=081331 \
-	--link-color-min=224875 \
-	--dot-color-max=f57402 \
-	--dot-color-min=165a99 \
-	--dot-radius=7 \
-	--tree-font-size=30 \
-	--tree-font-color=ffff00 \
-	--tree-font-face="3270Medium Nerd Font Mono" \
-	--cpulist-show=0 \
-	--memlist-show=0 \
-	--cpu-min-value=5 \
-	--toplists-row-height=0 \
-	--toplists-font-size=0 \
-	--toplists-bar-height=0 \
-	--toplists-bar-background=444444 \
-	--toplists-bar-color=7d54dd \
-	--background-image=$HOME/pics/wallpapers/rick.png \
+
+choosewall
+draw
 
 if command -v feh >/dev/null; then
 	feh --bg-fill /tmp/wallpaper/wall${i}.png
-	rm /tmp/wallpaper/wall${i}.png
+	#rm /tmp/wallpaper/wall${i}.png
 fi
 
 i=$(( ${i}*-1 ))

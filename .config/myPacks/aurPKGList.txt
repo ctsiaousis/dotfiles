@@ -16,6 +16,7 @@ light-git
 lightdm-webkit-theme-aether
 linux-ck
 ncurses5-compat-libs
+nerd-fonts-fantasque-sans-mono
 otf-san-francisco
 paper-icon-theme-git
 picom-tryone-git
@@ -42,6 +43,7 @@ urxvt-resize-font-git
 virtio-win
 wd719x-firmware
 woeusb
+xidlehook
 xorg-server-xdmx
 yay
 zoom

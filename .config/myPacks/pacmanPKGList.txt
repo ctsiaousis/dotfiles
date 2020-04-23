@@ -61,6 +61,7 @@ htop
 i3lock
 inetutils
 informant
+inkscape
 instagram-scraper
 interbench
 java-environment-common
@@ -106,6 +107,7 @@ nano
 ncmpcpp
 ncurses5-compat-libs
 neofetch
+nerd-fonts-fantasque-sans-mono
 netctl
 newsboat
 nodejs
@@ -118,6 +120,7 @@ otf-san-francisco
 pacman-contrib
 pamixer
 paper-icon-theme-git
+papirus-icon-theme
 patch
 paxtest
 pgadmin4
@@ -134,7 +137,6 @@ pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
 pulseaudio-jack
-pulseeffects
 pulsemixer
 python-pip
 python-ueberzug
@@ -206,6 +208,7 @@ xf86-input-synaptics
 xf86-video-amdgpu
 xf86-video-vesa
 xfce4-power-manager
+xidlehook
 xmlto
 xorg-bdftopcf
 xorg-docs

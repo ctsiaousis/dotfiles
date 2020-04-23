@@ -414,6 +414,35 @@ local globalKeys = awful.util.table.join(
             beautiful.system_blue_dark, beautiful.system_yellow_dark, beautiful.system_blue_light, beautiful.system_yellow_light))
         end,
         {description = "show dmenu", group = "launcher"}),
+    -- MPD control
+    awful.key(
+        { altkey, "Control" },
+        "Up",
+        function ()
+            os.execute("mpc toggle")
+        end,
+        {description = "mpc toggle", group = "widgets"}),
+    awful.key(
+        { altkey, "Control" },
+        "Down",
+        function ()
+            os.execute("mpc stop")
+        end,
+        {description = "mpc stop", group = "widgets"}),
+    awful.key(
+        { altkey, "Control" },
+        "Left",
+        function ()
+            os.execute("mpc prev")
+        end,
+        {description = "mpc prev", group = "widgets"}),
+    awful.key(
+        { altkey, "Control" },
+        "Right",
+        function ()
+            os.execute("mpc next")
+        end,
+        {description = "mpc next", group = "widgets"}),
     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
     awful.key(
         {"Control", "Shift"},

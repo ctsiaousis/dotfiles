@@ -19,7 +19,7 @@ local left_panel = function(screen)
 		y = screen.geometry.y,
 		ontop = true,
 		bg = beautiful.background,
-		fg = beautiful.fg_normal
+		fg = "#FFFF00"-- beautiful.fg_normal
 	}
 
 	panel.opened = false
