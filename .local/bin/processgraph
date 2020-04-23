@@ -8,10 +8,10 @@ curwall="/tmp/wallpaper/curwall"
 
 choosewall() {
 	case "$(date +"%H" | sed 's/0//')" in
-		[1-6]) echo "$waldir/midnight-wallpaper.png" > $curwall;;
-		[7-12]) echo "$waldir/morning-wallpaper.png" > $curwall;;
-		[13-18]) echo "$waldir/noon-wallpaper.png" > $curwall;;
-		[19-0]) echo "$waldir/night-wallpaper.png" > $curwall;;
+		[0-5]) echo "$waldir/midnight-wallpaper.png" > $curwall;;
+		[6-11]) echo "$waldir/morning-wallpaper.png" > $curwall;;
+		[12-17]) echo "$waldir/noon-wallpaper.png" > $curwall;;
+		[18-23]) echo "$waldir/night-wallpaper.png" > $curwall;;
 	esac
 
 	echo "the wall is now $curwall"

@@ -12,7 +12,7 @@
 -- It checks the difference between the current time and the next scheduled time
 -- Then convert it to seconds to set it as a timeout value
 
--- Limitations: 
+-- Limitations:
 -- Timeout paused when laptop/pc is suspended or in sleep mode, and there's probably some bugs too so whatever
 
 local awful = require('awful')
@@ -77,7 +77,7 @@ the_countdown = nil
 -- Geez why the f is lua's array starts with `1`? lol
 -- Element 2 will have the wallpaper file name
 local wall_data = {}
--- > Why array, you say? 
+-- > Why array, you say?
 -- Because why not? I'm new to lua and I'm experimenting with it
 
 
@@ -123,7 +123,7 @@ local update_wallpaper = function(wall_name)
 		beautiful.wallpaper = wall_dir
 
 		if update_ls_bg then
-			awful.spawn.easy_async_with_shell(update_ls_cmd .. ' ' .. wall_dir, function() 
+			awful.spawn.easy_async_with_shell(update_ls_cmd .. ' ' .. wall_dir, function()
 				--
 			end)
 		end
@@ -182,8 +182,8 @@ local manage_timer = function()
 		wall_data = {midnight_schedule, wallpaper_midnight}
 
 	end
-  
-	
+
+
 	-- Get the time difference to set as timeout for the wall_updater timer below
 	the_countdown = time_diff(wall_data[1], current_time())
 
@@ -203,7 +203,7 @@ local wall_updater = gears.timer {
 
 		-- Emit signal to update wallpaper
     	awesome.emit_signal("module::change_wallpaper")
-  	
+
   	end
 }
 

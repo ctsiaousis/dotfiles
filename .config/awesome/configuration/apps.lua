@@ -15,7 +15,7 @@ return {
 		network_manager 								= 'urxvt -e sudo wifi-menu',					-- Network manager
 		bluetooth_manager 								= 'blueman-manager',						-- Bluetooth manager
 		power_manager 									= 'xfce4-power-manager',					-- Power manager
-		package_manager 								= 'pacman',							-- GUI Package manager
+		package_manager 								= 'urxvt',							-- GUI Package manager
 		lock 											= 'awesome-client "_G.show_lockscreen()"',  -- Lockscreen
 		quake 											= 'urxvt',             -- Quake-like Terminal
 

@@ -31,7 +31,7 @@ local awesome_overrides = function(theme)
 
 	-- Wallpaper
 
-	theme.wallpaper = theme.dir .. '/wallpapers/morning-wallpaper.jpg'
+	theme.wallpaper = theme.dir .. '/wallpapers/night-wallpaper.jpg'
 
 	-- Foreground
 
@@ -55,7 +55,7 @@ local awesome_overrides = function(theme)
 	theme.systray_icon_spacing = dpi(16)
 
 	-- Titlebar
-	
+
 	theme.titlebar_size = dpi(34)
 	theme.titlebar_bg_focus = beautiful.gtk.get_theme_variables().bg_color:sub(1,7) .. '66'
 	theme.titlebar_bg_normal = beautiful.gtk.get_theme_variables().base_color:sub(1,7) .. '66'
@@ -179,13 +179,13 @@ local awesome_overrides = function(theme)
 	theme.layout_tile = theme.icons .. 'layouts/tile.svg'
 	theme.layout_dwindle = theme.icons .. 'layouts/dwindle.svg'
 	theme.layout_floating = theme.icons .. 'layouts/floating.svg'
-	
+
 	-- Taglist
 
 	theme.taglist_bg_empty = theme.background .. '99'
 	theme.taglist_bg_occupied =  '#ffffff' .. '1A'
 	theme.taglist_bg_urgent = "#E91E63" .. '99'
-	theme.taglist_bg_focus = theme.background
+	theme.taglist_bg_focus = '#FFF000' .. '3E'
 	theme.taglist_spacing = dpi(0)
 
 	-- Tasklist
@@ -208,7 +208,7 @@ local awesome_overrides = function(theme)
 	theme.notification_spacing = dpi(0)
 	theme.notification_icon_resize_strategy = 'center'
 	theme.notification_icon_size = dpi(32)
-	
+
 	-- Client Snap Theme
 
 	theme.snap_bg = theme.background
