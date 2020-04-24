@@ -3,18 +3,19 @@
 set -e
 
 mkdir -p /tmp/wallpaper
+touch /tmp/wallpaper/curwall
 waldir="$HOME/.config/awesome/theme/wallpapers"
 curwall="/tmp/wallpaper/curwall"
 
 choosewall() {
 	case "$(date +"%H" | sed 's/0//')" in
 		[0-5]) echo "$waldir/midnight-wallpaper.png" > $curwall;;
-		[6-11]) echo "$waldir/morning-wallpaper.png" > $curwall;;
-		[12-17]) echo "$waldir/noon-wallpaper.png" > $curwall;;
-		[18-23]) echo "$waldir/night-wallpaper.png" > $curwall;;
+		[6-9]|1[0-1]) echo "$waldir/morning-wallpaper.png" > $curwall;;
+		1[2-7]) echo "$waldir/noon-wallpaper.png" > $curwall;;
+		1[8-9]|2[0-3]) echo "$waldir/night-wallpaper.png" > $curwall;;
 	esac
 
-	echo "the wall is now $curwall"
+	echo "the wall is now $(cat $curwall)"
 }
 
 

@@ -35,8 +35,8 @@ local awesome_overrides = function(theme)
 
 	-- Foreground
 
-	theme.font = 'SF Pro Text Regular 10'
-	theme.title_font = 'SF Pro Text Bold 14'
+	theme.font = "3270Medium Nerd Font 12"
+	theme.title_font = '3270Medium Nerd Font 14'
 
 
 	theme.fg_normal = '#ffffffde'
@@ -146,7 +146,7 @@ local awesome_overrides = function(theme)
 	theme.useless_gap = dpi(4)
 
 	-- Menu
-	theme.menu_font = "SF Pro Text Regular 11"
+	theme.menu_font = "3270Medium Nerd Font 11"
 	theme.menu_submenu = '' -- ➤
 
 	theme.menu_height = dpi(34)
@@ -190,7 +190,7 @@ local awesome_overrides = function(theme)
 
 	-- Tasklist
 
-	theme.tasklist_font = 'SF Pro Text Regular 10'
+	theme.tasklist_font = '3270Medium Nerd Font 10'
 	theme.tasklist_bg_normal = theme.background .. '99'
 	theme.tasklist_bg_focus = theme.background
 	theme.tasklist_bg_urgent = "#E91E63" .. '99'
@@ -217,7 +217,7 @@ local awesome_overrides = function(theme)
 
 	-- Hotkey popup
 
-	theme.hotkeys_font = 'SF Pro Text Bold'
+	theme.hotkeys_font = '3270Medium Nerd Font 13'
 	theme.hotkeys_description_font   = 'SF Pro Text Regular Regular'
 	theme.hotkeys_bg = theme.background
 	theme.hotkeys_group_margin = dpi(20)

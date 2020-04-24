@@ -19,7 +19,7 @@ local wifi_state = false
 
 local action_name = wibox.widget {
 	text = 'Wireless Connection',
-	font = 'SF Pro Text Regular 11',
+	font = '3270Medium Nerd Font 11',
 	align = 'left',
 	widget = wibox.widget.textbox
 }
@@ -55,14 +55,14 @@ end
 local check_device_state = function()
 
 	awful.spawn.easy_async_with_shell(
-		'rfkill list wlan', 
+		'rfkill list wlan',
 		function(stdout)
 			if stdout:match('Soft blocked: yes') then
 				wifi_state = false
 			else
 				wifi_state = true
 			end
-		
+
 			update_imagebox()
 		end
 	)
@@ -72,7 +72,7 @@ check_device_state()
 
 
 local power_on_cmd = [[
-	
+
 	rfkill unblock wlan
 
 	# Create an AwesomeWM Notification
@@ -108,7 +108,7 @@ local toggle_action = function()
 	if wifi_state then
 		wifi_state = false
 		awful.spawn.easy_async_with_shell(
-			power_off_cmd, 
+			power_off_cmd,
 			function(stdout) end
 		)
 	else
@@ -136,7 +136,7 @@ widget_button:buttons(
 )
 
 watch(
-	'rfkill list wlan', 
+	'rfkill list wlan',
 	5,
 	function(_, stdout)
 		check_device_state()
@@ -153,7 +153,7 @@ local action_widget =  wibox.widget {
 			widget_button,
 			layout = wibox.layout.fixed.horizontal,
 		},
-		layout = wibox.layout.align.horizontal,	
+		layout = wibox.layout.align.horizontal,
 	},
 	left = dpi(24),
 	right = dpi(24),

@@ -207,7 +207,6 @@ xdg-user-dirs
 xf86-input-synaptics
 xf86-video-amdgpu
 xf86-video-vesa
-xfce4-power-manager
 xidlehook
 xmlto
 xorg-bdftopcf

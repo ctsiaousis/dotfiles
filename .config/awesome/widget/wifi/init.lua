@@ -1,7 +1,7 @@
 local awful = require('awful')
 local wibox = require('wibox')
 local gears = require('gears')
-local naughty = require('naughty') 
+local naughty = require('naughty')
 
 local watch = awful.widget.watch
 local dpi = require('beautiful').xresources.apply_dpi
@@ -42,7 +42,7 @@ local return_button = function()
 		},
 		widget = clickable_container
 	}
-	
+
 	widget_button:buttons(
 		gears.table.join(
 			awful.button(
@@ -65,7 +65,7 @@ local return_button = function()
 			timer_function = function()
 				if connected then
 
-					return 'Connected to: ' .. essid .. 
+					return 'Connected to: ' .. essid ..
 						'\nWiFi-strength: ' .. tostring(wifi_strength) .. '%'
 				else
 
@@ -104,7 +104,7 @@ local return_button = function()
 							essid = stdout:match('SSID: (.-)\n')
 							if essid then
 								-- Notify that you're already connected
-								naughty.notification({ 
+								naughty.notification({
 									message = "You are now connected to <b>\"" .. essid .. "\"</b>",
 									title = "Connection Established",
 									app_name = 'System notification',
@@ -117,7 +117,7 @@ local return_button = function()
 					)
 				else
 					-- Notify that you have been disconnected from Wi-Fi
-					naughty.notification({ 
+					naughty.notification({
 						message = "The network connection has been disconnected",
 						title = "Connection Disconnected",
 						app_name = "System Notification",
@@ -125,18 +125,18 @@ local return_button = function()
 					})
 				end
 			end
-		end 
+		end
 	end
 
 	watch(
 		[[
 		awk 'NR==3 {printf "%3.0f" ,($3/70)*100}' /proc/net/wireless
-		]], 
-		5,
+		]],
+		15,
 		function(_, stdout)
 
 			local widget_icon_name = 'wifi-strength'
-			
+
 			wifi_strength = tonumber(stdout)
 
 			if (wifi_strength ~= nil) then
@@ -152,7 +152,7 @@ local return_button = function()
 						if stdout and stdout ~= '' then
 							widget_icon_name = 'wifi-strength-alert'
 							if show_no_internet_access then
-								naughty.notification({ 
+								naughty.notification({
 									message = "Wi-Fi has no internet access",
 									title = "Connection Status",
 									app_name = "System Notification",
@@ -165,7 +165,7 @@ local return_button = function()
 						end
 
 						widget.icon:set_image(widget_icon_dir .. widget_icon_name .. '.svg')
-					
+
 					end
 				)
 			else

@@ -18,7 +18,7 @@ local frame_status = nil
 
 local action_name = wibox.widget {
 	text = 'Blur Effects',
-	font = 'SF Pro Text Regular 11',
+	font = '3270Medium Nerd Font 11',
 	align = 'left',
 	widget = wibox.widget.textbox
 }
@@ -57,15 +57,15 @@ local check_blur_status = function()
 	awful.spawn.easy_async_with_shell(
 		[[
 		grep -F 'method = "none";' ]] .. config_dir .. [[/configuration/picom.conf | tr -d '[\"\;\=\ ]'
-		]], 
+		]],
 		function(stdout)
-		
+
 			if stdout:match('methodnone') then
 				action_status = false
 			else
 				action_status = true
 			end
-		 
+
 			update_imagebox()
 		end
 	)
@@ -97,7 +97,7 @@ local toggle_blur = function(togglemode)
 
 	-- Run the script
 	awful.spawn.easy_async_with_shell(
-		toggle_blur_script, 
+		toggle_blur_script,
 		function(stdout, stderr)
 
 		end
@@ -148,8 +148,8 @@ local action_widget =  wibox.widget {
 }
 
 awesome.connect_signal(
-	'widget::blur:toggle', 
-	function() 
+	'widget::blur:toggle',
+	function()
 		toggle_blur_fx()
 	end
 )

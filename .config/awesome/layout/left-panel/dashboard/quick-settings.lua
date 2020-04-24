@@ -10,7 +10,7 @@ local quick_header = wibox.widget
 {
 
 	text = 'Quick Settings',
-	font = 'SF Pro Text Regular 12',
+	font = '3270Medium Nerd Font 12',
 	align = 'left',
 	valign = 'center',
 	widget = wibox.widget.textbox
@@ -32,10 +32,10 @@ return wibox.widget {
 			forced_height = dpi(35),
 			bg = beautiful.groups_title_bg,
 			shape = function(cr, width, height)
-				gears.shape.partially_rounded_rect(cr, width, height, true, true, false, false, beautiful.groups_radius) 
+				gears.shape.partially_rounded_rect(cr, width, height, true, true, false, false, beautiful.groups_radius)
 			end,
 			widget = wibox.container.background
-			
+
 		},
 
 		{

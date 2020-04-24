@@ -11,7 +11,7 @@ local blue_light_state = nil
 
 local action_name = wibox.widget {
 	text = 'Blue Light Filter',
-	font = 'SF Pro Text Regular 11',
+	font = '3270Medium Nerd Font 11',
 	align = 'left',
 	widget = wibox.widget.textbox
 }
@@ -45,7 +45,7 @@ local update_imagebox = function()
 
 		button_icon:set_image(icons.toggled_on)
 	else
-		
+
 		button_icon:set_image(icons.toggled_off)
 	end
 end
@@ -77,7 +77,7 @@ kill_state()
 local toggle_action = function()
 	awful.spawn.easy_async_with_shell(
 		[[
-		pgrep redshift > /dev/null && (redshift -x && pkill redshift && echo 'OFF') || 
+		pgrep redshift > /dev/null && (redshift -x && pkill redshift && echo 'OFF') ||
 		(echo 'ON' && redshift -l 0:0 -t 4500:4500 -r &>/dev/null &)
 		]],
 		function(stdout)
@@ -123,7 +123,7 @@ local action_widget =  wibox.widget {
 
 awesome.connect_signal(
 	'widget::blue_light:toggle',
-	function() 
+	function()
 		toggle_action()
 	end
 )

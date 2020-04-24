@@ -138,7 +138,8 @@ ruled.client.connect_signal("request::rules", function()
 			}
 		},
 		properties = {
-			tag = '2'
+			tag = '2',
+			switchtotag = true
 		}
 	}
 
@@ -158,7 +159,8 @@ ruled.client.connect_signal("request::rules", function()
 			}
 		},
 		properties = {
-			tag = '3'
+			tag = '3',
+			switchtotag = true
 		}
 	}
 
@@ -170,7 +172,7 @@ ruled.client.connect_signal("request::rules", function()
 				"dolphin",
 				"ark",
 				"Nemo",
-				"File-roller"
+				"Thunar"
 			}
 		},
 		properties = {
@@ -212,7 +214,6 @@ ruled.client.connect_signal("request::rules", function()
 			tag = '6',
 			skip_decoration = true,
 			draw_backdrop = false,
-			switchtotag = true,
 			floating = true,
 			hide_titlebars = true,
 			placement = awful.placement.centered
@@ -230,7 +231,8 @@ ruled.client.connect_signal("request::rules", function()
 			}
 		},
 		properties = {
-			tag = '7'
+			tag = '7',
+			switchtotag = true
 		}
 	}
 
@@ -239,12 +241,13 @@ ruled.client.connect_signal("request::rules", function()
 		id         = "sandbox",
 		rule_any   = {
 			class = {
-				"virt-manager",
+				"Virt-manager",
 				"VirtualBox Machine"
 			}
 		},
 		properties = {
-			tag = '8'
+			tag = '8',
+			switchtotag = true
 		}
 	}
 
@@ -255,12 +258,13 @@ ruled.client.connect_signal("request::rules", function()
 			class = {
 				"Oomox",
 				"Eclipse",
-				"UnityHub",
+				"Processing",
 				"jetbrains-studio"
 			}
 		},
 		properties = {
 			tag = '9',
+			switchtotag = true,
 			skip_decoration = true
 		}
 	}

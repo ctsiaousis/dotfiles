@@ -1,5 +1,5 @@
 configuration {
-    font:                           "SF Pro Text Regular 10";
+    font:                           "3270Medium Nerd Font 11";
     show-icons:                     true;
     drun-display-format:            "{name}";
     fullscreen:                     false;
@@ -48,7 +48,7 @@ button {
 }
 
 entry {
-    font:                           "SF Pro Text Regular 11";
+    font:                           "3270Medium Nerd Font 12";
     background-color:               @background;
     text-color:                     @foreground;
     expand:                         true;

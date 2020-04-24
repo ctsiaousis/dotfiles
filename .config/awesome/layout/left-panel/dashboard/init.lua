@@ -23,7 +23,7 @@ return function(_, panel)
 			},
 			{
 				text = 'Global Search',
-				font = 'SF Pro Text Regular 12',
+				font = '3270Medium Nerd Font 12',
 				align = 'left',
 				valign = 'center',
 				widget = wibox.widget.textbox
@@ -44,7 +44,7 @@ return function(_, panel)
 		},
 		bg = beautiful.groups_bg,
 		shape = function(cr, width, height)
-			gears.shape.rounded_rect(cr, width, height, beautiful.groups_radius) 
+			gears.shape.rounded_rect(cr, width, height, beautiful.groups_radius)
 		end,
 		widget = wibox.container.background
 	}
@@ -75,7 +75,7 @@ return function(_, panel)
 			},
 			{
 				text = 'End work session',
-				font = 'SF Pro Text Regular 12',
+				font = '3270Medium Nerd Font 12',
 				align = 'left',
 				valign = 'center',
 				widget = wibox.widget.textbox
@@ -97,7 +97,7 @@ return function(_, panel)
 		},
 		bg = beautiful.groups_bg,
 		shape = function(cr, width, height)
-			gears.shape.rounded_rect(cr, width, height, beautiful.groups_radius) 
+			gears.shape.rounded_rect(cr, width, height, beautiful.groups_radius)
 		end,
 		widget = wibox.container.background
 	}
@@ -132,6 +132,6 @@ return function(_, panel)
 		},
 		margins = dpi(16),
 		widget = wibox.container.margin
-		
+
 	}
 end

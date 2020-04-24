@@ -55,7 +55,7 @@ local return_button = function()
 				function()
 
 					if update_available then
-						awful.spawn(apps.default.package_manager .. ' --updates', false)
+						awful.spawn(apps.default.package_manager .. ' -e sudo pacman -Syu --noconfirm', false)
 
 					else
 						awful.spawn(apps.default.package_manager, false)
@@ -89,9 +89,9 @@ local return_button = function()
 	)
 
 
-	watch('checkupdates', 60, function(_, stdout)
+	watch('bash -c "checkupdates"', 60, function(_, stdout)
 
-		number_of_updates_available = tonumber(stdout:match('.-\n'):match('%d*'))
+		number_of_updates_available = tonumber(stdout:match('.\n'):match('%d*'))
 		update_package = stdout
 
 		local icon_name
