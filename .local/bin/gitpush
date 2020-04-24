@@ -23,6 +23,7 @@ config add $HOME/.config/homepage/. ;
 config add $HOME/.config/ranger/. ;
 config add $HOME/.config/zathura/. ;
 config add $HOME/.config/zsh/. ;
+config add $HOME/.config/.gitignore ;
 
 echo "Added all dotfiles. Now give a commit note"
 read note
