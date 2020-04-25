@@ -35,6 +35,8 @@ dialog
 dmenu
 dmidecode
 dnsmasq
+docker
+docker-compose
 doxygen
 ebtables
 eclipse-java

@@ -9,7 +9,6 @@ function config {
 config add $HOME/.Xresources ; 
 config add $HOME/.bashrc ; 
 config add $HOME/.xinitrc ;
-config add $HOME/.xprofile ; 
 config add $HOME/.local/bin/. ; 
 config add $HOME/.config/awesome/. ; 
 config add $HOME/.config/conky/. ;

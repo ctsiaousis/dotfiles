@@ -1,12 +1,3 @@
-
---     ▄▄                                            ▄     ▄ ▄    ▄
---     ██  ▄     ▄  ▄▄▄    ▄▄▄    ▄▄▄   ▄▄▄▄▄   ▄▄▄  █  █  █ ██  ██
---    █  █ ▀▄ ▄ ▄▀ █▀  █  █   ▀  █▀ ▀█  █ █ █  █▀  █ ▀ █▀█ █ █ ██ █
---    █▄▄█  █▄█▄█  █▀▀▀▀   ▀▀▀▄  █   █  █ █ █  █▀▀▀▀  ██ ██▀ █ ▀▀ █
---   █    █  █ █   ▀█▄▄▀  ▀▄▄▄▀  ▀█▄█▀  █ █ █  ▀█▄▄▀  █   █  █    █
-
--- Banner generated using `toilet -f mono9 AwesomeWM"
-
 local gears = require('gears')
 local awful = require('awful')
 local beautiful = require('beautiful')
@@ -34,7 +25,7 @@ require('layout')
 require('module.notifications')
 require('module.auto-start')
 require('module.decorate-client')
--- require('module.backdrop')
+require('module.backdrop')
 require('module.exit-screen')
 require('module.quake-terminal')
 require('module.titlebar')
@@ -117,5 +108,5 @@ client.connect_signal(
 )
 
 awful.spawn.with_shell(
-    'bash $HOME/.config/awesome/autorun.sh'
+    'bash $HOME/.config/awesome/autorun.sh' --can add more shell scripts here, separrated with comma
 )
