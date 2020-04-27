@@ -91,7 +91,7 @@ local return_button = function()
 
 	watch('bash -c "checkupdates"', 60, function(_, stdout)
 
-		number_of_updates_available = tonumber(stdout:match('.\n'):match('%d*'))
+		number_of_updates_available = stdout:lines()--tonumber(stdout:match('.\n'):match('%d*'))
 		update_package = stdout
 
 		local icon_name

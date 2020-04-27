@@ -6,6 +6,7 @@ export PATH="$HOME/.local/bin/:$PATH"
 # Default programs:
 export EDITOR="vim"
 export TERMINAL="urxvt"
+export Terminal="urxvt"
 export BROWSER="firefox"
 export READER="zathura"
 export FILE="ranger"
@@ -30,3 +31,9 @@ export ncmpcpp_directory="$XDG_CONFIG_HOME/ncmpcpp"
 #nodejs settings
 PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix=~/.node_modules
+
+#damn .wget-hst
+export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+
+#urxvt
+export RXVT_SOCKET="$XDG_RUNTIME_DIR"/urxvtd

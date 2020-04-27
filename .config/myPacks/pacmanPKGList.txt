@@ -18,6 +18,7 @@ automake
 awesome-freedesktop-git
 awesome-git
 base
+bazel
 bc
 bibata-cursor-theme
 binutils
@@ -129,7 +130,6 @@ pgadmin4
 picom-tryone-git
 pkgconf
 plymouth-git
-plymouth-theme-arch-charge
 popcorntime-bin
 postgresql
 powertop
@@ -141,6 +141,7 @@ pulseaudio-bluetooth
 pulseaudio-jack
 pulsemixer
 python-pip
+python-pyxdg
 python-ueberzug
 qemu
 ranger-git
@@ -254,7 +255,6 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
-xterm
 yay
 youtube-dl
 zathura

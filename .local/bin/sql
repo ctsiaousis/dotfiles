@@ -1,3 +1,5 @@
 #!/usr/bin/zsh
 
 sudo systemctl start postgresql && pgadmin4 > /dev/null 2>&1 &
+firefox $HOME/docs/HMMY/BASEIS/prPHASE_A.pdf &
+

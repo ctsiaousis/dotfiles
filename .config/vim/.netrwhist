@@ -1,8 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/kalikanjaro/docs/projects/tictactoe-minimax'
+let g:netrw_dirhist_0='/home/kalikanjaro'
+let g:netrw_dirhist_9='/home/kalikanjaro/.local/bin'
+let g:netrw_dirhist_8='/home/kalikanjaro/.local'
+let g:netrw_dirhist_7='/home/kalikanjaro'
 let g:netrw_dirhist_6='/home/kalikanjaro/.local/bin'
 let g:netrw_dirhist_5='/home/kalikanjaro/.config/mpv/script-opts'
 let g:netrw_dirhist_4='/home/kalikanjaro/.config/homepage'
 let g:netrw_dirhist_3='/home/kalikanjaro/docs/the-glorious-dotfiles/config/awesome/floppy/theme'
 let g:netrw_dirhist_2='/home/kalikanjaro/docs/the-glorious-dotfiles/config/awesome/floppy'
-let g:netrw_dirhist_1='/home/kalikanjaro/docs/the-glorious-dotfiles/config/awesome/floppy/module'

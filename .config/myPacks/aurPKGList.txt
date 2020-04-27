@@ -21,7 +21,6 @@ otf-san-francisco
 paper-icon-theme-git
 picom-tryone-git
 plymouth-git
-plymouth-theme-arch-charge
 popcorntime-bin
 pscircle
 python-ueberzug
