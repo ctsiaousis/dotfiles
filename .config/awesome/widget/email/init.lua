@@ -46,7 +46,7 @@ local email_icon_widget = wibox.widget {
 
 local email_unread_text = wibox.widget {
 	text = 'Unread emails:',
-	font = 'SF Pro Text Bold 10',
+	font = '3270Medium Nerd Font 14',
 	align = 'center',
 	valign = 'center',
 	widget = wibox.widget.textbox
@@ -54,7 +54,7 @@ local email_unread_text = wibox.widget {
 
 local email_count = wibox.widget {
 	text = '0',
-	font = 'SF Pro Text Regular 10',
+	font = '3270Medium Nerd Font 12',
 	align = 'left',
 	valign = 'center',
 	widget = wibox.widget.textbox
@@ -62,15 +62,15 @@ local email_count = wibox.widget {
 
 local email_recent_from = wibox.widget {
 	-- text = 'From:',
-	font = 'SF Pro Text Regular 10',
-	markup = '<span font="SF Pro Text Bold 10">From: </span>loading@stdout.sh',
+	font = '3270Medium Nerd Font 12',
+	markup = '<span font="3270Medium Nerd Font 12">From: </span>loading@stdout.sh',
 	align = 'left',
 	valign = 'center',
 	widget = wibox.widget.textbox
 }
 
 local email_recent_subject = wibox.widget {
-	markup = '<span font="SF Pro Text Bold 10">Subject: </span>Loading data',
+	markup = '<span font="3270Medium Nerd Font 12">Subject: </span>Loading data',
 	-- font = 'SF Pro Text Regular 10',
 	align = 'left',
 	valign = 'center',
@@ -84,17 +84,13 @@ local check_count = [[
 python3 - <<END
 import imaplib
 import re
-
 M=imaplib.IMAP4_SSL("]] .. imap_server .. [[", ]] .. port .. [[)
 M.login("]] .. email_account .. [[","]] .. app_password .. [[")
-
 status, counts = M.status("INBOX","(MESSAGES UNSEEN)")
-
 if status == "OK":
 	unread = re.search(r'UNSEEN\s(\d+)', counts[0].decode('utf-8')).group(1)
 else:
 	unread = "N/A"
-
 print (unread)
 END
 ]]
@@ -108,19 +104,16 @@ python3 - <<END
 import imaplib
 import email
 import datetime
-
 def process_mailbox(M):
 	rv, data = M.search(None, "(UNSEEN)")
 	if rv != 'OK':
 		print ("No messages found!")
 		return
-
 	for num in reversed(data[0].split()):
 		rv, data = M.fetch(num, '(BODY.PEEK[])')
 		if rv != 'OK':
 			print ("ERROR getting message", num)
 			return
-
 		msg = email.message_from_bytes(data[0][1])
 		print ('From:', msg['From'])
 		print ('Subject: %s' % (msg['Subject']))
@@ -135,17 +128,13 @@ def process_mailbox(M):
 			#             print  payload.get_payload()
 			#         else:
 			#             print msg.get_payload()
-
-
 M=imaplib.IMAP4_SSL("]] .. imap_server .. [[", ]] .. port .. [[)
 M.login("]] .. email_account .. [[","]] .. app_password .. [[")
-
 rv, data = M.select("INBOX")
 if rv == 'OK':
 		process_mailbox(M)
 M.close()
 M.logout()
-
 END
 ]]
 
@@ -193,7 +182,7 @@ local email_report = wibox.widget{
 -- Create a notification
 local notify_new_email = function(count, details)
 	if tonumber(count) > tonumber(mail_counter) then
-		
+
 		details = details:gsub("<(.-)>", ''):sub(1, -2)
 		mail_counter = count
 
@@ -203,7 +192,7 @@ local notify_new_email = function(count, details)
 			title = "You have " .. mail_counter .. " unread emails!"
 		end
 
-		naughty.notification({ 
+		naughty.notification({
 			title = title,
 			message = details,
 			app_name = 'Email',
@@ -231,15 +220,15 @@ local email_details_tooltip = awful.tooltip
 local set_error_msg = function(status)
 
 	if status == 'no-credentials' then
-		email_recent_from.markup = '<span font="SF Pro Text Bold 10">From: </span>' .. 'message@stderr.sh'
+		email_recent_from.markup = '<span font="3270Medium Nerd Font 12">From: </span>' .. 'message@stderr.sh'
 		email_recent_subject.markup = '<span font="SF Pro Text Bold 10">Subject: </span>' .. 'Credentials are missing!'
 		email_details_tooltip.markup = 'Missing credentials!'
 		return
 	end
 
 	if status == 'no-network' then
-		email_recent_from.markup = '<span font="SF Pro Text Bold 10">From: </span>' .. 'message@stderr.sh'
-		email_recent_subject.markup = '<span font="SF Pro Text Bold 10">Subject: </span>' .. 'Check network connection!'
+		email_recent_from.markup = '<span font="3270Medium Nerd Font 12">From: </span>' .. 'message@stderr.sh'
+		email_recent_subject.markup = '<span font="3270Medium Nerd Font 12">Subject: </span>' .. 'Check network connection!'
 		email_details_tooltip.markup = 'No internet connection!'
 		return
 	end
@@ -259,8 +248,8 @@ local set_email_details = function(count)
 			-- Only get the email address
 			text_from = text_from:match('<(.*)>')
 
-			email_recent_from.markup = '<span font="SF Pro Text Bold 10">From: </span>' .. text_from
-			email_recent_subject.markup = '<span font="SF Pro Text Bold 10">Subject: </span>' .. text_subject
+			email_recent_from.markup = '<span font="3270Medium Nerd Font 12">From: </span>' .. text_from
+			email_recent_subject.markup = '<span font="3270Medium Nerd Font 12">Subject: </span>' .. text_subject
 
 			-- Update email icon
 			email_icon_widget.icon:set_image(widget_icon_dir .. 'email-unread' .. '.svg')
@@ -277,8 +266,8 @@ end
 
 -- Update textbox to show that there's no unread email
 local set_no_email_details = function()
-	email_recent_from.markup = '<span font="SF Pro Text Bold 10">From: </span>' .. 'empty@stdout.sh'
-	email_recent_subject.markup = '<span font="SF Pro Text Bold 10">Subject: </span>' .. 'Empty inbox'
+	email_recent_from.markup = '<span font="3270Medium Nerd Font 12">From: </span>' .. 'empty@stdout.sh'
+	email_recent_subject.markup = '<span font="3270Medium Nerd Font 12">Subject: </span>' .. 'Empty inbox'
 	email_details_tooltip.text = 'No unread email...'
 
 	email_icon_widget.icon:set_image(widget_icon_dir .. 'email' .. '.svg')
@@ -287,7 +276,7 @@ end
 
 -- Check credentials
 local check_credentials = function()
-	if email_account == '' or app_password == '' or 
+	if email_account == '' or app_password == '' or
 		imap_server == '' or port == '' then
 
 		set_error_msg('no-credentials')
@@ -334,13 +323,13 @@ local update_widget_timer = gears.timer {
 	call_now = true,
 	callback  = function()
 		-- Check if there's a credentials
-		update_widget() 
+		update_widget()
 	end
 }
 
 -- Update widget after connecting to wifi
 awesome.connect_signal('system::wifi_connected', function()
-	gears.timer.start_new(15, function() 
+	gears.timer.start_new(15, function()
 		update_widget()
 	end)
 end)

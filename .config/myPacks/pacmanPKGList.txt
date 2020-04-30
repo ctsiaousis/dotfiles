@@ -49,6 +49,7 @@ ffmpegthumbnailer
 firefox
 flex
 fortune-mod
+fzf
 gcc
 gdb
 gimp
@@ -147,6 +148,7 @@ qemu
 ranger-git
 redshift
 rhash
+ripgrep
 rofi-git
 rsync
 rxvt-unicode
