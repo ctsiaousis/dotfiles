@@ -5,8 +5,7 @@ set viewdir=$XDG_DATA_HOME/vim/view
 set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
 set runtimepath=$XDG_CONFIG_HOME/vim,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after
 filetype plugin indent on
-
-colo murphy
+colo desert
 syntax on
 set number
 set title
@@ -89,8 +88,8 @@ call plug#end()
 
 
 " ------------------NERDTree-------------------
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeDirArrowExpandable = '~' 
+let g:NERDTreeDirArrowCollapsible = '*'
 " ------------------/NERDTree-------------------
 
 " ------------------SPLITS--------------------

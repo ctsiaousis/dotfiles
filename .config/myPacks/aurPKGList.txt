@@ -1,8 +1,10 @@
 aic94xx-firmware
+arc-icon-theme-git
 awesome-freedesktop-git
 awesome-git
 bibata-cursor-theme
 brave-bin
+eclipse-java
 gotop-bin
 gphotofs
 gtypist

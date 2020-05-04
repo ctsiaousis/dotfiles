@@ -1,39 +1,40 @@
 ! special
-*.foreground:   #a2a2a2
-*.background:   #281919
-*.cursorColor:  #a2a2a2
+*.foreground:   #746c48
+*.background:   #170f0d
+*.cursorColor:  #746c48
 
 ! black
-*.color0:       #555555
-*.color8:       #888888
+*.color0:       #392925
+*.color8:       #544b2e
 
 ! red
-*.color1:       #9c3528
-*.color9:       #d64937
+*.color1:       #98724c
+*.color9:       #af652f
 
 ! green
-*.color2:       #61bc3b
-*.color10:      #86df5d
+*.color2:       #908f32
+*.color10:      #c3c13d
 
 ! yellow
-*.color3:       #f3b43a
-*.color11:      #fdd75a
+*.color3:       #aa964c
+*.color11:      #c8b55b
 
 ! blue
-*.color4:       #0d68a8
-*.color12:      #0f75bd
+*.color4:       #7b854e
+*.color12:      #70a16c
 
 ! magenta
-*.color5:       #744560
-*.color13:      #9e5e83
+*.color5:       #6b5644
+*.color13:      #98724c
 
 ! cyan
-*.color6:       #288e9c
-*.color14:      #37c3d6
+*.color6:       #5c5142
+*.color14:      #778725
 
 ! white
-*.color7:       #a2a2a2
-*.color15:      #f9f9f9
+*.color7:       #c8b55b
+*.color15:      #e4dc8c
+
 
 URxvt*imLocale: en_US.UTF-8
 URxvt*termName: rxvt-unicode-256color

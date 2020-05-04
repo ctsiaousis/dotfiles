@@ -8,7 +8,7 @@ amd-ucode
 android-tools
 android-udev
 arc-gtk-theme
-arc-icon-theme
+arc-icon-theme-git
 arch-wiki-docs
 arduino
 arduino-docs
@@ -145,6 +145,7 @@ python-pip
 python-pyxdg
 python-ueberzug
 qemu
+qutebrowser
 ranger-git
 redshift
 rhash

@@ -20,7 +20,7 @@ local user_name = wibox.widget {
 	widget = wibox.widget.textbox
 }
 
-awful.spawn.easy_async_with_shell("whoami", function(stdout) 
+awful.spawn.easy_async_with_shell("whoami", function(stdout)
 	if stdout then
 		-- Remove new line
 		local username = stdout:gsub('%\n','')
@@ -93,12 +93,12 @@ lock_command = function()
 end
 
 poweroff_command = function()
-	awful.spawn.with_shell('poweroff')
+	awful.spawn.with_shell('sudo poweroff')
 	awesome.emit_signal("module::exit_screen_hide")
 end
 
 reboot_command = function()
-	awful.spawn.with_shell('reboot')
+	awful.spawn.with_shell('sudo reboot')
 	awesome.emit_signal("module::exit_screen_hide")
 end
 
@@ -180,7 +180,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
 
 		auto_start          = true,
 		stop_event          = 'release',
-		keypressed_callback = function(self, mod, key, command) 
+		keypressed_callback = function(self, mod, key, command)
 
 			if key == 's' then
 				suspend_command()
@@ -222,7 +222,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
 	end
 
 	-- Signals
-	awesome.connect_signal("module::exit_screen_show", function() 
+	awesome.connect_signal("module::exit_screen_show", function()
 
 		exit_screen_grabber:start()
 	end)
