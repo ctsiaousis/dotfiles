@@ -27,6 +27,7 @@ blender
 blueman
 bluez-utils
 brave-bin
+clang
 cmake
 conky
 cronie
@@ -96,7 +97,6 @@ linux-ck
 linux-firmware
 lolcat
 lxappearance
-lyx
 m4
 macchanger
 maim
@@ -166,6 +166,7 @@ texlive-fontsextra
 texlive-formatsextra
 texlive-games
 texlive-humanities
+texlive-langgreek
 texlive-latexextra
 texlive-music
 texlive-pictures

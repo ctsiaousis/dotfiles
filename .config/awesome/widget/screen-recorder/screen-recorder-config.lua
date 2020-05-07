@@ -1,7 +1,7 @@
 local user_preferences = {}
 
 
-user_resolution 	= '1366x768'							-- Screen 	WIDTHxHEIGHT
+user_resolution 	= '1920x1080'							-- Screen 	WIDTHxHEIGHT
 user_offset 		= '0,0' 								-- Offset 	x,y
 user_audio 			= false									-- bool   	true or false
 user_save_directory = '$(xdg-user-dir VIDEOS)/Recordings/'	-- String 	$HOME

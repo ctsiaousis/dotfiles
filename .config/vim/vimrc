@@ -78,6 +78,7 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
   \ 'branch': 'release/0.x'
   \ }
+Plug 'lervag/vimtex'
 "Plug 'junegunn/seoul256.vim'
 
 " List ends here. Plugins become visible to Vim after this call.

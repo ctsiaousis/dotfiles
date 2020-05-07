@@ -150,7 +150,6 @@ local locker = function(s)
 		'We know where you live.',
 		'This incident will be reported.',
 		'RUN!',
-		'Yamete, Oniichan~ uwu',
 		'This will self-destruct in 5 seconds!',
 		'Image successfully sent!',
 		'You\'re doomed!'

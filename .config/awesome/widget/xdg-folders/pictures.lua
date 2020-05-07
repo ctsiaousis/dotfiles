@@ -34,7 +34,7 @@ pic_button:buttons(
 			1,
 			nil,
 			function()
-				awful.spawn.with_shell('xdg-open $(xdg-user-dir PICTURES)')
+				awful.spawn.with_shell('thunar $(xdg-user-dir PICTURES)')
 			end
 		)
 	)
@@ -47,7 +47,7 @@ awful.tooltip(
 		align = 'right',
 		text = 'Pictures',
 		margin_leftright = dpi(8),
-		margin_topbottom = dpi(8),    
+		margin_topbottom = dpi(8),
 		preferred_positions = {'right', 'left', 'top', 'bottom'}
 	}
 )
