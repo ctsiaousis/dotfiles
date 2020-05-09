@@ -318,7 +318,7 @@ end
 
 -- Updater
 local update_widget_timer = gears.timer {
-	timeout = 30,
+	timeout = 300,
 	autostart = true,
 	call_now = true,
 	callback  = function()
