@@ -8,6 +8,7 @@ filetype plugin indent on
 colo desert
 syntax on
 set number
+set spell
 set title
 set mouse=a
 set tabstop=8

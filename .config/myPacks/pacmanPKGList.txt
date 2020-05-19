@@ -76,6 +76,7 @@ jq
 jre-openjdk
 jre-openjdk-headless
 jsoncpp
+jupyter-notebook
 kdb
 laptop-mode-tools
 libgphoto2
@@ -155,8 +156,8 @@ rsync
 rxvt-unicode
 scrot
 sl
-spotblock-git
 spotify
+stockfish
 sublime-text-dev
 sudo
 sxiv
@@ -206,6 +207,7 @@ virtio-win
 virtualbox-guest-iso
 vlc
 vpnc
+vscodium-bin
 wd719x-firmware
 woeusb
 wpa_supplicant

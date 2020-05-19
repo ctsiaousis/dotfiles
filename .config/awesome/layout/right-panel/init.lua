@@ -42,7 +42,7 @@ local right_panel = function(s)
 	{
 		right = 0
 	}
-	
+
 	open_panel = function()
 		local focused = awful.screen.focused()
 		panel_visible = true
@@ -59,7 +59,7 @@ local right_panel = function(s)
 
 		focused.right_panel.visible = false
 		focused.backdrop_rdb.visible = false
-		
+
 		panel:emit_signal('closed')
 	end
 
@@ -145,7 +145,7 @@ local right_panel = function(s)
 						require('widget.user-profile'),
 						require('widget.weather'),
 						require('widget.email'),
-						require('widget.social-media'),
+						--require('widget.social-media'),
 						require('widget.calculator')
 					},
 

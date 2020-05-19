@@ -87,6 +87,25 @@ local locker = function(s)
 		widget = wibox.widget.textbox
 	}
 
+	local l_text = wibox.widget {
+		id = 'uname_text',
+		markup = 'Caps Lock is off',
+		font = 'SF Pro Display Italic 10',
+		align = 'center',
+		valign = 'center',
+		opacity = 0.0,
+		widget = wibox.widget.textbox
+	}
+	local l_text_shadow = wibox.widget {
+		id = 'uname_text',
+		markup = '<span foreground="#00000066">' .. 'Caps Lock is off' .. "</span>",
+		font = 'SF Pro Display Italic 10',
+		align = 'center',
+		valign = 'center',
+		opacity = 0.0,
+		widget = wibox.widget.textbox
+	}
+
 	-- Update username textbox
 	awful.spawn.easy_async_with_shell('whoami | tr -d "\\n"', function(stdout)
 		uname_text.markup = stdout
@@ -308,6 +327,29 @@ local locker = function(s)
 		end)
 	end
 
+		-- Check xkblayout state
+	check_layout = function()
+		awful.spawn.easy_async_with_shell(
+		    'xkblayout-state print %s | grep gr | tr -d " "', --this only works for greek layout
+		    function(stdout)
+			status = stdout
+
+			if status:match('gr') then --i need to find a more clever way
+				l_text.opacity = 1.0
+				l_text_shadow.opacity = 1.0
+
+				l_text:set_markup('Non English layout!')
+				l_text_shadow:set_markup('<span foreground="#00000066">' .. 'Non English layout!' .. "</span>")
+			else
+				l_text.opacity = 0.0
+				l_text_shadow.opacity = 0.0
+			end
+
+			l_text:emit_signal('widget::redraw_needed')
+			l_text_shadow:emit_signal('widget::redraw_needed')
+		end)
+	end
+
 	local rotate_container = wibox.container.rotate()
 
 	local locker_widget = wibox.widget {
@@ -521,6 +563,11 @@ local locker = function(s)
 
 			if key == 'Caps_Lock' then
 				check_caps()
+				check_layout()
+			end
+
+			if key == 'Alt' then
+				check_layout()
 			end
 
 			if not type_again then
@@ -627,6 +674,12 @@ local locker = function(s)
 						caps_text,
 						vertical_offset = dpi(-1),
 						widget = wibox.layout.stack
+					},
+					{
+						l_text_shadow,
+						l_text,
+						vertical_offset = dpi(-1),
+						widget = wibox.layout.stack
 					}
 				},
 			},
@@ -649,6 +702,9 @@ local locker = function(s)
 
 			-- Check webcam status
 			check_webcam()
+
+			--check if input is English
+			check_layout()
 
 			-- Show all the lockscreen on each screen
 			for s in screen do

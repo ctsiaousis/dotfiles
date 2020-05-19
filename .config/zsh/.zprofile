@@ -29,11 +29,14 @@ export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 #
 export ncmpcpp_directory="$XDG_CONFIG_HOME/ncmpcpp"
 #nodejs settings
-PATH="$HOME/.node_modules/bin:$PATH"
-export npm_config_prefix=~/.node_modules
+PATH="$HOME/.config/node_modules/bin:$PATH"
+export npm_config_prefix=~/config/node_modules
 
 #damn .wget-hst
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 
 #urxvt
 export RXVT_SOCKET="$XDG_RUNTIME_DIR"/urxvtd
+
+#JupyterLab
+export JUPYTERLAB_DIR=$HOME/.local/share/jupyter/lab

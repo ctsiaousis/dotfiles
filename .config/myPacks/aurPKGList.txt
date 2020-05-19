@@ -28,8 +28,8 @@ pscircle
 python-ueberzug
 ranger-git
 rofi-git
-spotblock-git
 spotify
+stockfish
 sublime-text-dev
 tor-browser
 ttf-anka-coder
@@ -42,6 +42,7 @@ uefi-shell-git
 unimatrix-git
 urxvt-resize-font-git
 virtio-win
+vscodium-bin
 wd719x-firmware
 woeusb
 xidlehook
