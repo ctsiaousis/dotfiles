@@ -89,7 +89,7 @@ local locker = function(s)
 
 	local l_text = wibox.widget {
 		id = 'uname_text',
-		markup = 'Caps Lock is off',
+		markup = 'Non English layout!',
 		font = 'SF Pro Display Italic 10',
 		align = 'center',
 		valign = 'center',
@@ -98,7 +98,7 @@ local locker = function(s)
 	}
 	local l_text_shadow = wibox.widget {
 		id = 'uname_text',
-		markup = '<span foreground="#00000066">' .. 'Caps Lock is off' .. "</span>",
+		markup = '<span foreground="#00000066">' .. 'Non English layout!' .. "</span>",
 		font = 'SF Pro Display Italic 10',
 		align = 'center',
 		valign = 'center',
@@ -169,7 +169,6 @@ local locker = function(s)
 		'We know where you live.',
 		'This incident will be reported.',
 		'RUN!',
-		'This will self-destruct in 5 seconds!',
 		'Image successfully sent!',
 		'You\'re doomed!'
 	}

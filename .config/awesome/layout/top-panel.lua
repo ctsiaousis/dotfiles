@@ -292,6 +292,7 @@ local TopPanel = function(s, offset)
 
 	s.tray_toggler  = require('widget.tray-toggler')
 	s.filesystem	= require("awesome-wm-widgets.fs-widget.fs-widget")
+	s.lang 			= require("widget.keyboard-lang")()
 	s.updater 		= require('widget.package-updater')()
 	s.screen_rec 	= require('widget.screen-recorder')()
 	s.music       	= require('widget.music')()
@@ -321,6 +322,7 @@ local ram_widget	= require("awesome-wm-widgets.ram-widget.ram-widget")()
 				widget = wibox.container.margin
 			},
 			s.tray_toggler,
+			s.lang,
 			s.filesystem({ mounts = { '/', '/home' } }),
 			ram_widget,
 			s.updater,
