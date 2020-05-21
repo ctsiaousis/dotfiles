@@ -1,185 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
-</head>
-<body>
+  </head>
+  <body>
     <div id="search">
-        <input id="search-field" type="text" name="search-field"/>
+      <input id="search-field" type="text" name="search-field" />
     </div>
     <div class="container">
-        <div id="clock"></div>
-        <div class="weather-container">
-		<div class="row">
-			<div class="inline">⚓</div>
-			<div id="city"class="inline"></div>
-			<div class="inline">💨</div>
-			<div id="wind"class="inline"></div>
-		</div>
-		<div class="row">
-			<div class="inline">🛰️</div>
-			<div id="weather-description"class="inline"></div>
-			<div class="inline">🌡️</div>
-			<div id="temp" class="inline"></div>
-		</div>
+      <div id="clock"></div>
+      <div class="weather-container">
+        <div class="row">
+          <div class="inline">⚓</div>
+          <div id="city" class="inline"></div>
+          <div class="inline">💨</div>
+          <div id="wind" class="inline"></div>
         </div>
-        <div class="bookmark-container">
-            <div class="bookmark-set">
-                <div class="bookmark-title">ΣΧΟΛΗ 📚</div>
-                <div class="bookmark-inner-container">
-                    <a class="bookmark" href="http://courses.ece.tuc.gr" target="_blank">Courses</a>
-                    <a class="bookmark" href="http://ece.tuc.gr" target="_blank">SiteHMMY</a>
-                    <a class="bookmark" href="http://tuc.gr" target="_blank">tuc Main Page</a>
-                    <a class="bookmark" href="https://mail.isc.tuc.gr/" target="_blank">Mail@isc.tuc.gr</a>
-                    <a class="bookmark" href="https://tuc-gr.zoom.us/" target="_blank">Zoom tu TUC</a>
-                </div>
-            </div>
-            <div class="bookmark-set">
-                <div class="bookmark-title">Arch Linux 💻</div>
-                <div class="bookmark-inner-container">
-                    <a class="bookmark" href="https://www.archlinux.org/" target="_blank">Arch Homepage</a>
-                    <a class="bookmark" href="https://wiki.archlinux.org/" target="_blank">Arch Wiki</a>
-                    <a class="bookmark" href="https://www.archlinux.org/packages/" target="_blank">Arch Packages</a>
-                    <a class="bookmark" href="https://aur.archlinux.org/" target="_blank">AUR Home</a>
-                    <a class="bookmark" href="https://bugs.archlinux.org/" target="_blank">Arch Bugs</a>
-                    <a class="bookmark" href="https://bbs.archlinux.org/" target="_blank">Arch Forums</a>
-                    <a class="bookmark" href="https://www.archlinux.org/planet/" target="_blank">Planet Arch</a>
-                </div>
-            </div>
-            <div class="bookmark-set">
-                <div class="bookmark-title">Suckless 🧱</div>
-                <div class="bookmark-inner-container">
-                    <a class="bookmark" href="https://www.suckless.org/" target="_blank">Suckless Homepage</a>
-                    <a class="bookmark" href="https://git.suckless.org/" target="_blank">Suckless Source Code</a>
-                    <a class="bookmark" href="https://dwm.suckless.org/" target="_blank">dwm</a>
-                    <a class="bookmark" href="https://st.suckless.org/" target="_blank">st</a>
-                    <a class="bookmark" href="https://tools.suckless.org/dmenu/" target="_blank">dmenu</a>
-                    <a class="bookmark" href="https://surf.suckless.org/" target="_blank">surf</a>
-                    <a class="bookmark" href="https://tools.suckless.org/tabbed/" target="_blank">tabbed</a>
-                </div>
-            </div>
-            <div class="bookmark-set">
-                <div class="bookmark-title">Social & Video 🎥</div>
-                <div class="bookmark-inner-container">
-                    <a class="bookmark" href="https://youtube.com/" target="_blank">Youtube</a>
-                    <a class="bookmark" href="https://github.com/ctsiaousis" target="_blank">GitHub</a>
-                    <a class="bookmark" href="https://netflix.com" target="_blank">Netflix</a>
-                    <a class="bookmark" href="https://gmail.com" target="_blank">Gmail</a>
-                    <a class="bookmark" href="https://messenger.com" target="_blank">Messenger</a>
-                    <a class="bookmark" href="https://soundcloud.com/discover" target="_blank">SoundCloud</a>
-                </div>
-            </div>
-            <div class="bookmark-set">
-            <div class="bookmark-title">Reddit 🚸</div>
-                <div class="bookmark-inner-container">
-                    <a class="bookmark" href="https://reddit.com/r/linux" target="_blank">/r/linux</a>
-                    <a class="bookmark" href="https://reddit.com/r/archlinux" target="_blank">/r/archlinux</a>
-                    <a class="bookmark" href="https://reddit.com/r/commandline" target="_blank">/r/commandline</a>
-                    <a class="bookmark" href="https://reddit.com/r/linuxmemes" target="_blank">/r/linuxmemes</a>
-                    <a class="bookmark" href="https://reddit.com/r/suckless" target="_blank">/r/suckless</a>
-                    <a class="bookmark" href="https://reddit.com/r/unixporn" target="_blank">/r/unixporn</a>
-                </div>
-            </div>
+        <div class="row">
+          <div class="inline">🛰️</div>
+          <div id="weather-description" class="inline"></div>
+          <div class="inline">🌡️</div>
+          <div id="temp" class="inline"></div>
         </div>
-        <div class="weather-container">
-		<div class="row">
-			<div class="inline">🌊</div>
-			<div id="sec-city"class="inline"></div>
-			<div class="inline">💨</div>
-			<div id="sec-wind"class="inline"></div>
-		</div>
-		<div class="row">
-			<div class="inline">🛰️</div>
-			<div id="sec-weather-description"class="inline"></div>
-			<div class="inline">🌡️</div>
-			<div id="sec-temp" class="inline"></div>
-		</div>
+      </div>
+      <div class="bookmark-container">
+        <div class="bookmark-set">
+          <div class="bookmark-title">ΣΧΟΛΗ 📚</div>
+          <div class="bookmark-inner-container">
+            <a class="bookmark" href="http://courses.ece.tuc.gr" target="_blank"
+              >Courses</a
+            >
+            <a class="bookmark" href="http://ece.tuc.gr" target="_blank"
+              >SiteHMMY</a
+            >
+            <a class="bookmark" href="http://tuc.gr" target="_blank"
+              >tuc Main Page</a
+            >
+            <a class="bookmark" href="https://mail.isc.tuc.gr/" target="_blank"
+              >Mail@isc.tuc.gr</a
+            >
+            <a class="bookmark" href="https://tuc-gr.zoom.us/" target="_blank"
+              >Zoom tu TUC</a
+            >
+          </div>
         </div>
+        <div class="bookmark-set">
+          <div class="bookmark-title">Arch Linux 💻</div>
+          <div class="bookmark-inner-container">
+            <a
+              class="bookmark"
+              href="https://www.archlinux.org/"
+              target="_blank"
+              >Arch Homepage</a
+            >
+            <a
+              class="bookmark"
+              href="https://wiki.archlinux.org/"
+              target="_blank"
+              >Arch Wiki</a
+            >
+            <a
+              class="bookmark"
+              href="https://www.archlinux.org/packages/"
+              target="_blank"
+              >Arch Packages</a
+            >
+            <a
+              class="bookmark"
+              href="https://aur.archlinux.org/"
+              target="_blank"
+              >AUR Home</a
+            >
+            <a
+              class="bookmark"
+              href="https://bugs.archlinux.org/"
+              target="_blank"
+              >Arch Bugs</a
+            >
+            <a
+              class="bookmark"
+              href="https://bbs.archlinux.org/"
+              target="_blank"
+              >Arch Forums</a
+            >
+            <a
+              class="bookmark"
+              href="https://www.archlinux.org/planet/"
+              target="_blank"
+              >Planet Arch</a
+            >
+          </div>
+        </div>
+        <div class="bookmark-set">
+          <div class="bookmark-title">Suckless 🧱</div>
+          <div class="bookmark-inner-container">
+            <a class="bookmark" href="https://www.suckless.org/" target="_blank"
+              >Suckless Homepage</a
+            >
+            <a class="bookmark" href="https://git.suckless.org/" target="_blank"
+              >Suckless Source Code</a
+            >
+            <a class="bookmark" href="https://dwm.suckless.org/" target="_blank"
+              >dwm</a
+            >
+            <a class="bookmark" href="https://st.suckless.org/" target="_blank"
+              >st</a
+            >
+            <a
+              class="bookmark"
+              href="https://tools.suckless.org/dmenu/"
+              target="_blank"
+              >dmenu</a
+            >
+            <a
+              class="bookmark"
+              href="https://surf.suckless.org/"
+              target="_blank"
+              >surf</a
+            >
+            <a
+              class="bookmark"
+              href="https://tools.suckless.org/tabbed/"
+              target="_blank"
+              >tabbed</a
+            >
+          </div>
+        </div>
+        <div class="bookmark-set">
+          <div class="bookmark-title">Social & Video 🎥</div>
+          <div class="bookmark-inner-container">
+            <a class="bookmark" href="https://youtube.com/" target="_blank"
+              >Youtube</a
+            >
+            <a
+              class="bookmark"
+              href="https://github.com/ctsiaousis"
+              target="_blank"
+              >GitHub</a
+            >
+            <a class="bookmark" href="https://netflix.com" target="_blank"
+              >Netflix</a
+            >
+            <a class="bookmark" href="https://gmail.com" target="_blank"
+              >Gmail</a
+            >
+            <a class="bookmark" href="https://messenger.com" target="_blank"
+              >Messenger</a
+            >
+            <a
+              class="bookmark"
+              href="https://soundcloud.com/discover"
+              target="_blank"
+              >SoundCloud</a
+            >
+          </div>
+        </div>
+        <div class="bookmark-set">
+          <div class="bookmark-title">Reddit 🚸</div>
+          <div class="bookmark-inner-container">
+            <a
+              class="bookmark"
+              href="https://reddit.com/r/archlinux"
+              target="_blank"
+              >/r/archlinux</a
+            >
+            <a
+              class="bookmark"
+              href="https://www.reddit.com/r/Gentoo/"
+              target="_blank"
+              >/r/Gentoo</a
+            >
+            <a
+              class="bookmark"
+              href="https://www.reddit.com/r/awesomewm/"
+              target="_blank"
+              >/r/AwesomeWm</a
+            >
+            <a
+              class="bookmark"
+              href="https://www.reddit.com/r/privacy/"
+              target="_blank"
+              >/r/privacy</a
+            >
+            <a
+              class="bookmark"
+              href="https://reddit.com/r/unixporn"
+              target="_blank"
+              >/r/unixporn</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="weather-container">
+        <div class="row">
+          <div class="inline">🌊</div>
+          <div id="sec-city" class="inline"></div>
+          <div class="inline">💨</div>
+          <div id="sec-wind" class="inline"></div>
+        </div>
+        <div class="row">
+          <div class="inline">🛰️</div>
+          <div id="sec-weather-description" class="inline"></div>
+          <div class="inline">🌡️</div>
+          <div id="sec-temp" class="inline"></div>
+        </div>
+      </div>
     </div>
 
     <script>
-        // Search on enter key event
-        document.getElementById("search-field").addEventListener("keydown",  event => { 
-            if (event.keyCode === 13) {
-                var val = document.getElementById("search-field").value;
-                window.open("https://google.com/search?q=" + val);
-            }
+      // Search on enter key event
+      document
+        .getElementById('search-field')
+        .addEventListener('keydown', event => {
+          if (event.keyCode === 13) {
+            var val = document.getElementById('search-field').value;
+            window.open('https://google.com/search?q=' + val);
+          }
         });
-        // Get current time and format
-        getTime = () => {
-            let date = new Date(),
-                min = date.getMinutes(),
-                sec = date.getSeconds(),
-                hour = date.getHours();
+      // Get current time and format
+      getTime = () => {
+        let date = new Date(),
+          min = date.getMinutes(),
+          sec = date.getSeconds(),
+          hour = date.getHours();
 
-            return "" + 
-                (hour < 10 ? ("0" + hour) : hour) + ":" + 
-                (min < 10 ? ("0" + min) : min) + ":" + 
-                (sec < 10 ? ("0" + sec) : sec);
+        return (
+          '' +
+          (hour < 10 ? '0' + hour : hour) +
+          ':' +
+          (min < 10 ? '0' + min : min) +
+          ':' +
+          (sec < 10 ? '0' + sec : sec)
+        );
+      };
+
+      window.onload = () => {
+        let xhr = new XMLHttpRequest();
+        // Request to open weather map
+        xhr.open(
+          'GET',
+          'http://api.openweathermap.org/data/2.5/weather?id=735640&units=metric&appid=059852dbb891a9822bf12e08231c0b5c',
+        );
+        xhr.onload = () => {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              let json = JSON.parse(xhr.responseText);
+              console.log(json);
+              document.getElementById('city').innerHTML = json.name;
+              document.getElementById('temp').innerHTML =
+                json.main.temp.toFixed(0) + ' C';
+              document.getElementById('weather-description').innerHTML =
+                json.weather[0].description;
+              document.getElementById('wind').innerHTML =
+                2 * json.wind.speed + ' Knots';
+            } else {
+              console.log('error msg: ' + xhr.status);
+            }
+          }
+        };
+        xhr.send();
+        let ch = new XMLHttpRequest();
+        // Request to open weather map
+        ch.open(
+          'GET',
+          'http://api.openweathermap.org/data/2.5/weather?id=260114&units=metric&appid=059852dbb891a9822bf12e08231c0b5c',
+        );
+        ch.onload = () => {
+          if (ch.readyState === 4) {
+            if (ch.status === 200) {
+              let json = JSON.parse(ch.responseText);
+              console.log(json);
+              document.getElementById('sec-city').innerHTML = json.name;
+              document.getElementById('sec-temp').innerHTML =
+                json.main.temp.toFixed(0) + ' C';
+              document.getElementById('sec-weather-description').innerHTML =
+                json.weather[0].description;
+              document.getElementById('sec-wind').innerHTML =
+                2 * json.wind.speed + ' Knots';
+            } else {
+              console.log('error msg: ' + ch.status);
+            }
+          }
+        };
+        ch.send();
+        // Set up the clock
+        document.getElementById('clock').innerHTML = getTime();
+        // Set clock interval to tick clock
+        setInterval(() => {
+          document.getElementById('clock').innerHTML = getTime();
+        }, 100);
+      };
+
+      document.addEventListener('keydown', event => {
+        if (event.keyCode == 32) {
+          // Spacebar code to open search
+          document.getElementById('search').style.display = 'flex';
+          document.getElementById('search-field').focus();
+        } else if (event.keyCode == 27) {
+          // Esc to close search
+          document.getElementById('search-field').value = '';
+          document.getElementById('search-field').blur();
+          document.getElementById('search').style.display = 'none';
         }
-
-        window.onload = () => {
-            let xhr = new XMLHttpRequest();
-            // Request to open weather map
-            xhr.open('GET', 'http://api.openweathermap.org/data/2.5/weather?id=735640&units=metric&appid=059852dbb891a9822bf12e08231c0b5c');
-            xhr.onload = () => {
-                if (xhr.readyState === 4) {
-                    if (xhr.status === 200) {
-                        let json = JSON.parse(xhr.responseText);
-                        console.log(json);
-                        document.getElementById("city").innerHTML = json.name;
-                        document.getElementById("temp").innerHTML = json.main.temp.toFixed(0) + " C";
-                        document.getElementById("weather-description").innerHTML = json.weather[0].description;
-			document.getElementById("wind").innerHTML = (2*json.wind.speed) + " Knots";
-                    } else {
-                        console.log('error msg: ' + xhr.status);
-                    }
-                }
-            }
-            xhr.send();
-            let ch = new XMLHttpRequest();
-            // Request to open weather map
-            ch.open('GET', 'http://api.openweathermap.org/data/2.5/weather?id=260114&units=metric&appid=059852dbb891a9822bf12e08231c0b5c');
-            ch.onload = () => {
-                if (ch.readyState === 4) {
-                    if (ch.status === 200) {
-                        let json = JSON.parse(ch.responseText);
-                        console.log(json);
-                        document.getElementById("sec-city").innerHTML = json.name;
-                        document.getElementById("sec-temp").innerHTML = json.main.temp.toFixed(0) + " C";
-                        document.getElementById("sec-weather-description").innerHTML = json.weather[0].description;
-			document.getElementById("sec-wind").innerHTML = (2*json.wind.speed) + " Knots";
-                    } else {
-                        console.log('error msg: ' + ch.status);
-                    }
-                }
-            }
-            ch.send();
-            // Set up the clock
-            document.getElementById("clock").innerHTML = getTime();
-            // Set clock interval to tick clock
-            setInterval( () => {
-                document.getElementById("clock").innerHTML = getTime();
-            },100);
-        }
-
-        document.addEventListener("keydown", event => {
-            if (event.keyCode == 32) {          // Spacebar code to open search
-                document.getElementById('search').style.display = 'flex';
-                document.getElementById('search-field').focus();
-            } else if (event.keyCode == 27) {   // Esc to close search
-                document.getElementById('search-field').value = '';
-                document.getElementById('search-field').blur();
-                document.getElementById('search').style.display = 'none';
-            }
-        });
+      });
     </script>
-</body>
+  </body>
 </html>
-
