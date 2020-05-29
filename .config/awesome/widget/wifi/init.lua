@@ -132,7 +132,7 @@ local return_button = function()
 		[[
 		awk 'NR==3 {printf "%3.0f" ,($3/70)*100}' /proc/net/wireless
 		]],
-		15,
+		30,
 		function(_, stdout)
 
 			local widget_icon_name = 'wifi-strength'

@@ -291,7 +291,7 @@ local TopPanel = function(s, offset)
 
 
 	s.tray_toggler  = require('widget.tray-toggler')
-	s.filesystem	= require("awesome-wm-widgets.fs-widget.fs-widget")
+	s.filesystem	= require("widget.fs-widget.fs-widget")
 	s.lang 			= require("widget.keyboard-lang")()
 	s.updater 		= require('widget.package-updater')()
 	s.screen_rec 	= require('widget.screen-recorder')()
@@ -300,7 +300,7 @@ local TopPanel = function(s, offset)
 	s.wifi        	= require('widget.wifi')()
 	s.battery     	= require('widget.battery')()
 	s.r_dashboard 	= require('layout.right-panel.right-panel-opener')()
-local ram_widget	= require("awesome-wm-widgets.ram-widget.ram-widget")()
+	s.ram_widget	= require("widget.ram-widget")()
 
 
 
@@ -324,7 +324,7 @@ local ram_widget	= require("awesome-wm-widgets.ram-widget.ram-widget")()
 			s.tray_toggler,
 			s.lang,
 			s.filesystem({ mounts = { '/', '/home' } }),
-			ram_widget,
+			s.ram_widget,
 			s.updater,
 			s.screen_rec,
 			s.music,
