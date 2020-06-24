@@ -67,9 +67,9 @@ local clientKeys =
 	),
 
 	awful.key(
-		{modkey}, 
-		'u', 
-		awful.client.urgent.jumpto, 
+		{modkey},
+		'u',
+		awful.client.urgent.jumpto,
 		{description = 'jump to urgent client', group = 'client'}
 	),
 	awful.key(
@@ -93,8 +93,8 @@ local clientKeys =
     ),
 	-- move floating client to center
 	awful.key(
-		{ modkey, "Shift" }, 
-		"c", 
+		{ modkey, "Shift" },
+		"c",
 		function(c)
 			local focused = awful.screen.focused()
 
@@ -113,6 +113,7 @@ local clientKeys =
 			c.fullscreen = false
 			c.maximized = false
 			c.floating = not c.floating
+			c.ontop = c.floating
 			c:raise()
 		end,
 		{description = 'toggle floating', group = 'client'}

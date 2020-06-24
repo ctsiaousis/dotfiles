@@ -121,13 +121,13 @@ def process_mailbox(M):
 		if date_tuple:
 			local_date = datetime.datetime.fromtimestamp(email.utils.mktime_tz(date_tuple))
 			print ("Local Date:", local_date.strftime("%a, %d %b %Y %H:%M:%S") + "\n")
-			# with code below you can process text of email
-			# if msg.is_multipart():
-			#     for payload in msg.get_payload():
-			#         if payload.get_content_maintype() == 'text':
-			#             print  payload.get_payload()
-			#         else:
-			#             print msg.get_payload()
+			 with code below you can process text of email
+			 if msg.is_multipart():
+			     for payload in msg.get_payload():
+			         if payload.get_content_maintype() == 'text':
+			             print  payload.get_payload()
+			         else:
+			             print msg.get_payload()
 M=imaplib.IMAP4_SSL("]] .. imap_server .. [[", ]] .. port .. [[)
 M.login("]] .. email_account .. [[","]] .. app_password .. [[")
 rv, data = M.select("INBOX")

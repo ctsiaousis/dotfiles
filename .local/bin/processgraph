@@ -54,6 +54,6 @@ if command -v feh >/dev/null; then
 fi
 
 i=$(( ${i}*-1 ))
-sleep 3 
+sleep 6 
 
 done

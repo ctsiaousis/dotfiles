@@ -43,6 +43,7 @@ ruled.client.connect_signal("request::rules", function()
 			titlebars_enabled = true,
 			floating = true,
 			draw_backdrop = true,
+			ontop = true,
 			skip_decoration = true,
 			shape = function(cr, width, height)
 						gears.shape.rounded_rect(cr, width, height, beautiful.client_radius)
@@ -61,6 +62,7 @@ ruled.client.connect_signal("request::rules", function()
 			titlebars_enabled = true,
 			floating = true,
 			draw_backdrop = true,
+			ontop = true,
 			skip_decoration = true,
 			shape = function(cr, width, height)
 						gears.shape.rounded_rect(cr, width, height, beautiful.client_radius)
@@ -78,6 +80,7 @@ ruled.client.connect_signal("request::rules", function()
 		properties = {
 			titlebars_enabled = false,
 			floating = true,
+			ontop = true,
 			hide_titlebars = true,
 			draw_backdrop = false,
 			skip_decoration = true,
@@ -94,6 +97,7 @@ ruled.client.connect_signal("request::rules", function()
 		properties = {
 			titlebars_enabled = false,
 			floating = true,
+			ontop = true,
 			hide_titlebars = true,
 			draw_backdrop = false,
 			skip_decoration = true,
@@ -135,6 +139,7 @@ ruled.client.connect_signal("request::rules", function()
 			class = {
 				"firefox",
 				"Brave",
+				"qutebrowser",
 				"Tor Browser"
 			}
 		},
@@ -194,6 +199,7 @@ ruled.client.connect_signal("request::rules", function()
 		},
 		properties = {
 			tag = '5',
+			ontop = true,
 			draw_backdrop = false
 		}
 	}
@@ -216,6 +222,7 @@ ruled.client.connect_signal("request::rules", function()
 			skip_decoration = true,
 			draw_backdrop = false,
 			floating = true,
+			ontop = true,
 			hide_titlebars = true,
 			placement = awful.placement.centered
 		}
