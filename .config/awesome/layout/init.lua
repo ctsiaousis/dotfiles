@@ -6,15 +6,22 @@ local right_panel = require('layout.right-panel')
 -- Create a wibox panel for each screen and add it
 screen.connect_signal("request::desktop_decoration", function(s)
 
-	if s.index == 1 then
-		-- Create the left_panel
-		s.left_panel = left_panel(s)
-		-- Create the Top bar
-		s.top_panel = top_panel(s, true)
-	else
-		-- Create the Top bar
-		s.top_panel = top_panel(s, false)
-	end
+--	if s.index == 1 then
+--		-- Create the left_panel
+--		s.left_panel = left_panel(s)
+--		-- Create the Top bar
+--		s.top_panel = top_panel(s, true)
+--	else
+--		-- Create the Top bar
+--		s.top_panel = top_panel(s, false)
+--	end
+--	s.right_panel = right_panel(s)
+--	s.right_panel_show_again = false
+
+	-- Create the left_panel
+	s.left_panel = left_panel(s)
+	-- Create the Top bar
+	s.top_panel = top_panel(s, true)
 	s.right_panel = right_panel(s)
 	s.right_panel_show_again = false
 end)

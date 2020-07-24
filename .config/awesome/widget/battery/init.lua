@@ -100,7 +100,7 @@ local return_button = function()
 	get_battery_info()
 
 	-- Update tooltip on hover
-	battery_widget:connect_signal('mouse::enter', function() 
+	battery_widget:connect_signal('mouse::enter', function()
 		get_battery_info()
 	end)
 
@@ -121,7 +121,7 @@ local return_button = function()
             icon = widget_icon_dir .. 'battery-alert.svg',
             app_name = 'System notification',
             title = 'Battery is dying!',
-            message = 'Hey, I think we have a problem here. Save your work before reaching the oblivion.',
+            message = 'Huston we have a problem. Save your work before reaching oblivion.',
             urgency = 'critical'
         })
     end
@@ -152,7 +152,7 @@ local return_button = function()
 						notify_critcal_battery = false
 						show_battery_warning()
 					end
-				 
+
 				elseif battery_percentage > 10 and battery_percentage < 20 then
 
 					icon_name = icon_name .. '-' .. '10'
@@ -246,9 +246,9 @@ local return_button = function()
 
 			battery_tooltip:set_text('No battery detected!')
 			battery_imagebox.icon:set_image(gears.surface.load_uncached(widget_icon_dir .. 'battery-unknown' .. '.svg'))
-			
+
 			return
-		
+
 		end
 
 		update_battery(stdout)

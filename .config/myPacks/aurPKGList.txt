@@ -44,7 +44,6 @@ urxvt-resize-font-git
 virtio-win
 vscodium-bin
 wd719x-firmware
-woeusb
 xidlehook
 xkblayout-state-git
 xorg-server-xdmx

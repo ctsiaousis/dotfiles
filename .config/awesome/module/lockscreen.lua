@@ -23,7 +23,7 @@ local pam = require('liblua_pam')
 local capture_intruder = true  							-- Capture a picture using webcam
 local face_capture_dir = '${HOME}/pics/Intruders/'  -- Save location, auto creates
 
-local background_mode = 'blur' 							-- Available background mode: `blur`, `root`, `background`
+local background_mode = 'background' 							-- Available background mode: `blur`, `root`, `background`
 local change_background_on_time = true					-- Dynamic background will only work with `blur` mode
 
 local wall_dir = gears.filesystem.get_configuration_dir() .. 'theme/wallpapers/'

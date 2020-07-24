@@ -128,6 +128,7 @@ pacman-contrib
 pamixer
 paper-icon-theme-git
 papirus-icon-theme
+pass
 patch
 paxtest
 pgadmin4
@@ -148,6 +149,8 @@ python-pip
 python-pyxdg
 python-ueberzug
 qemu
+qt5-doc
+qtcreator
 qutebrowser
 ranger-git
 redshift
@@ -178,9 +181,11 @@ texlive-publishers
 texlive-science
 thunar
 thunar-media-tags-plugin
+thunderbird
 tldr
 tor-browser
 transmission-gtk
+tree
 ttf-anka-coder
 ttf-arphic-uming
 ttf-font-awesome
