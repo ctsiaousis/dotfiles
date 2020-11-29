@@ -12,6 +12,8 @@
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
+#autocompletion module
+source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # History in cache directory:
 HISTSIZE=10000
 SAVEHIST=10000

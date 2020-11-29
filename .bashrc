@@ -134,3 +134,6 @@ alias p='sudo pacman'
 alias SS='sudo systemctl'
 
 #alias greek='setxkbmap us,gr -option grp:alt_caps_toggle,grp_led:scroll'
+function man() {
+	/usr/bin/man -Tpdf $1 | zathura -
+}

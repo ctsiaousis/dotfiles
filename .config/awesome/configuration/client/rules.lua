@@ -108,6 +108,29 @@ ruled.client.connect_signal("request::rules", function()
 		}
 	}
 
+	-- floating programs
+	ruled.client.append_rule {
+		id         = "floatings",
+		rule_any   = {
+			class = {
+				"Git-gui",
+				"Omegon"
+			},
+		},
+		properties = {
+			titlebars_enabled = true,
+			floating = true,
+			ontop = true,
+			hide_titlebars = false,
+			draw_backdrop = false,
+			skip_decoration = true,
+			shape = function(cr, width, height)
+						gears.shape.rounded_rect(cr, width, height, beautiful.client_radius)
+					end,
+			placement = awful.placement.centered
+		}
+	}
+
 	-- terminal emulators
 	ruled.client.append_rule {
 		id         = "terminals",
@@ -200,7 +223,8 @@ ruled.client.connect_signal("request::rules", function()
 		properties = {
 			tag = '5',
 			ontop = true,
-			draw_backdrop = false
+			draw_backdrop = false,
+			switchtotag = true
 		}
 	}
 

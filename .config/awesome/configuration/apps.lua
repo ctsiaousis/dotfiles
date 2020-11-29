@@ -10,7 +10,7 @@ return {
 	default = {
 		terminal 										= 'urxvt',                                  -- Terminal Emulator
 		text_editor 									= 'subl3',                                  -- GUI Text Editor
-		web_browser 									= 'firefox',                                -- Web browser
+		web_browser 									= 'brave',                                -- Web browser
 		file_manager 									= 'thunar',                                 -- GUI File manager
 		network_manager 								= 'urxvt -e sudo wifi-menu',				-- Network manager
 		bluetooth_manager 								= 'blueman-manager',						-- Bluetooth manager
@@ -41,11 +41,10 @@ return {
 		config_dir .. '/configuration/picom.conf',     												-- Compositor
 		'blueman-applet',                                                                           -- Bluetooth tray icon
 		'mpd',                                                                                      -- Music Server
-		'xfce4-power-manager',                                                                      -- Power manager
+		--'xfce4-power-manager',                                                                      -- Power manager
+		'thunar --daemon',
 
-
-		'xrdb $HOME/.Xresources',
-		'pulseeffects --gapplication-service',                                                      -- Sound Equalizer
+		'xrdb $HOME/.Xresources',                                                    -- Sound Equalizer
 
 		'xidlehook --not-when-fullscreen --not-when-audio --timer 600 '..
 		' "awesome-client \'_G.show_lockscreen()\'" ""'  											-- Auto lock timer

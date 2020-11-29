@@ -294,9 +294,9 @@ local TopPanel = function(s, offset)
 	s.filesystem	= require("widget.fs-widget.fs-widget")
 	s.lang 			= require("widget.keyboard-lang")()
 	s.updater 		= require('widget.package-updater')()
-	s.screen_rec 	= require('widget.screen-recorder')()
+	--s.screen_rec 	= require('widget.screen-recorder')()
 	s.music       	= require('widget.music')()
-	s.bluetooth   	= require('widget.bluetooth')()
+	--s.bluetooth   	= require('widget.bluetooth')()
 	s.wifi        	= require('widget.wifi')()
 	s.battery     	= require('widget.battery')()
 	s.r_dashboard 	= require('layout.right-panel.right-panel-opener')()
@@ -326,9 +326,9 @@ local TopPanel = function(s, offset)
 			s.filesystem({ mounts = { '/', '/home' } }),
 			s.ram_widget,
 			s.updater,
-			s.screen_rec,
+			--s.screen_rec,
 			s.music,
-			s.bluetooth,
+			--s.bluetooth,
 			s.wifi,
 			s.battery,
 			layout_box(s),
