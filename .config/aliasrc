@@ -1,0 +1,29 @@
+#!/bin/sh
+
+alias \
+	cp='cp -i' \
+	mv='mv -i' \
+	df='df -h' \
+	free='free -m' \
+	dcd='cd "$(ls -d */ | dmenu -fn glisp -nb "#100" -nf "#b9c0af" -sb "#000" -sf "#afff2f" -i)"' \
+	grep='grep --colour=auto' \
+	wif='sudo wifi-menu' \
+	config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME' \
+	cpush='config push https://github.com/ctsiaousis/dotfiles.git master --force' \
+	aws='cd ~/.config/awesome && ls -a' \
+	yta='youtube-dl -x --audio-format mp3 --add-metadata' \
+	batt='watch -n0 cat /sys/class/power_supply/BAT0/capacity' \
+	wiki='firefox --new-window file:///usr/share/doc/arch-wiki/html/en/List_of_applications.html &' \
+	ls='ls -hN --color=auto --group-directories-first' \
+	p='sudo pacman' \
+	SS='sudo systemctl' \
+	neofetch='neofetch | sed "s/with Radeon Vega Mobile Gfx @/@/g"' \
+	rm='rm -v' \
+	la='ls -A' \
+	ll='ls -alF' \
+	..='cd ..' \
+	virtman='sudo systemctl start libvirtd && virt-manager'
+
+function make() {
+	/bin/make -C $(pwd) "$@" && echo "Build Successful ✔️" || echo "Build Error ✖️"
+}
