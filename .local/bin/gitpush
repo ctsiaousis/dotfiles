@@ -29,6 +29,6 @@ echo "Added all dotfiles. Now give a commit note"
 read note
 /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME/ commit -m "$note" &&
 
-/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME push https://github.com/ctsiaousis/dotfiles.git master --force &&
+/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME push git@github.com:ctsiaousis/dotfiles.git master --force &&
 	echo "..Done!" && exit
 

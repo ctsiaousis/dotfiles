@@ -26,6 +26,7 @@ paper-icon-theme-git
 picom-tryone-git
 plymouth-git
 popcorntime-bin
+postman-bin
 pscircle
 ranger-git
 rofi-git

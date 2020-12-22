@@ -26,6 +26,7 @@ base
 bazel
 bc
 bibata-cursor-theme
+bind
 binutils
 bison
 blender
@@ -96,6 +97,7 @@ informant
 inkscape
 instagram-scraper
 interbench
+intltool
 iperf
 java-environment-common
 java-runtime-common
@@ -171,12 +173,11 @@ papirus-icon-theme
 pass
 patch
 paxtest
-pgadmin4
 picom-tryone-git
 pkgconf
 plymouth-git
 popcorntime-bin
-postgresql
+postman-bin
 powertop
 projectm-pulseaudio
 pscircle
@@ -225,7 +226,6 @@ texlive-publishers
 texlive-science
 thunar
 thunar-media-tags-plugin
-thunderbird
 tldr
 tor-browser
 transmission-gtk
@@ -261,6 +261,7 @@ vlc
 vpnc
 vscodium-bin
 wd719x-firmware
+wireshark-qt
 woeusb
 wpa_supplicant
 xampp
@@ -289,7 +290,6 @@ xorg-server-xdmx-dev
 xorg-server-xephyr
 xorg-server-xnest
 xorg-server-xvfb
-xorg-server-xwayland
 xorg-sessreg
 xorg-smproxy
 xorg-x11perf
@@ -316,6 +316,7 @@ xorg-xrefresh
 xorg-xset
 xorg-xsetroot
 xorg-xvinfo
+xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud

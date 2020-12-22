@@ -21,9 +21,14 @@ alias \
 	rm='rm -v' \
 	la='ls -A' \
 	ll='ls -alF' \
-	..='cd ..' \
-	virtman='sudo systemctl start libvirtd && virt-manager'
+	..='cd .. && ls' \
+	virtman='sudo systemctl start libvirtd && virt-manager' \
+	vi='vim'
 
 function make() {
 	/bin/make -C $(pwd) "$@" && echo "Build Successful ✔️" || echo "Build Error ✖️"
+}
+
+function manpdf() {
+	/usr/bin/man -Tpdf $1 | zathura -
 }
