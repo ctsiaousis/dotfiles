@@ -20,7 +20,7 @@ local tags = {
 	{
 		icon = icons.text_editor,
 		type = 'code',
-		default_app = 'subl3',
+		default_app = 'subl',
 		screen = 1
 	},
 	{

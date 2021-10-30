@@ -179,7 +179,7 @@ ruled.client.connect_signal("request::rules", function()
 			class = {
 				"Geany",
 				"Atom",
-				"Subl3",
+				"Subl",
 				"code-oss"
 			},
 			name  = {

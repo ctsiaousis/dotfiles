@@ -14,7 +14,7 @@ local clickable_container = require('widget.clickable-container')
 naughty.config.defaults.ontop = true
 naughty.config.defaults.icon_size = dpi(32)
 naughty.config.defaults.timeout = 5
-naughty.config.defaults.title = 'System Notification'
+naughty.config.defaults.title = 'AKUME RE'
 naughty.config.defaults.margin = dpi(16)
 naughty.config.defaults.border_width = 0
 naughty.config.defaults.position = 'top_right'
@@ -39,13 +39,13 @@ naughty.config.icon_formats = {	"png", "svg", "jpg", "gif" }
 -- Presets / rules
 
 ruled.notification.connect_signal('request::rules', function()
-	
+
 	-- Critical notifs
 	ruled.notification.append_rule {
 		rule       = { urgency = 'critical' },
-		properties = { 
+		properties = {
 			font        		= 'SF Pro Text Bold 10',
-			bg 					= '#ff0000', 
+			bg 					= '#ff0000',
 			fg 					= '#ffffff',
 			margin 				= dpi(16),
 			position 			= 'top_right',
@@ -58,7 +58,7 @@ ruled.notification.connect_signal('request::rules', function()
 		rule       = { urgency = 'normal' },
 		properties = {
 			font        		= 'SF Pro Text Regular 10',
-			bg      			= beautiful.transparent, 
+			bg      			= beautiful.transparent,
 			fg 					= beautiful.fg_normal,
 			margin 				= dpi(16),
 			position 			= 'top_right',
@@ -70,7 +70,7 @@ ruled.notification.connect_signal('request::rules', function()
 	-- Low notifs
 	ruled.notification.append_rule {
 		rule       = { urgency = 'low' },
-		properties = { 
+		properties = {
 			font        		= 'SF Pro Text Regular 10',
 			bg     				= beautiful.transparent,
 			fg 					= beautiful.fg_normal,
@@ -244,7 +244,7 @@ naughty.connect_signal("request::display", function(n)
 			margins = dpi(5),--beautiful.notification_margin,
 			widget  = wibox.container.margin
 		}
-	
+
 	}
 
 	-- Destroy popups if dont_disturb mode is on

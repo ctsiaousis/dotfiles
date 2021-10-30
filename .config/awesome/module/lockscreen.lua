@@ -420,7 +420,7 @@ local locker = function(s)
 			mkdir -p $save_dir;
 		fi
 
-		ffmpeg -f video4linux2 -s 800x600 -i /dev/video0 -ss 0:0:2 -frames 1 ${file_loc}
+		ffmpeg -f video4linux2 -i /dev/video0 -vframes 1 ${file_loc}
 
 		canberra-gtk-play -i camera-shutter &
 		echo ${file_loc}

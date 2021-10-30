@@ -15,6 +15,12 @@ local globalKeys = awful.util.table.join(
     -- Hotkeys
     awful.key(
         {modkey},
+        'o',
+        awful.client.movetoscreen,
+        {description = 'change window screen', group = 'layout'}
+    ),
+    awful.key(
+        {modkey},
         'F1',
         hotkeys_popup.show_help,
         {description = 'show help', group = 'awesome'}

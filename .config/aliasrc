@@ -1,6 +1,7 @@
 #!/bin/sh
 
 alias \
+	xclip='xclip -selection c' \
 	cp='cp -i' \
 	mv='mv -i' \
 	df='df -h' \
@@ -16,7 +17,10 @@ alias \
 	wiki='firefox --new-window file:///usr/share/doc/arch-wiki/html/en/List_of_applications.html &' \
 	ls='ls -hN --color=auto --group-directories-first' \
 	p='sudo pacman' \
+	pcln='sudo paccache -rk2 -ruk0' \
+	yaycln='yay -Sc --aur' \
 	SS='sudo systemctl' \
+	sshastart='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa' \
 	neofetch='neofetch | sed "s/with Radeon Vega Mobile Gfx @/@/g"' \
 	rm='rm -v' \
 	la='ls -A' \
