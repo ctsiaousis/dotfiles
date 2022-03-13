@@ -27,7 +27,8 @@ alias \
 	ll='ls -alF' \
 	..='cd .. && ls' \
 	virtman='sudo systemctl start libvirtd && virt-manager' \
-	vi='vim'
+	vi='vim' \
+	snappng='ffmpeg -f video4linux2 -i /dev/video0 -vframes 1'
 
 function make() {
 	/bin/make -C $(pwd) "$@" && echo "Build Successful ✔️" || echo "Build Error ✖️"

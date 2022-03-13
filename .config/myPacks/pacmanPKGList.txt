@@ -13,6 +13,7 @@ arandr
 arc-gtk-theme
 arc-icon-theme-git
 arch-wiki-docs
+archiso-git
 arduino
 arduino-docs
 asciiquarium
@@ -35,9 +36,12 @@ boost
 botan
 brave-bin
 calcurse
+cdrdao
+cdrtools
 clang
 clinfo
 cmake
+colorpicker
 conky
 cronie
 dhcpcd
@@ -49,6 +53,7 @@ docker
 docker-compose
 doxygen
 dunst
+dvd+rw-tools
 ebtables
 eclipse-ecj
 eclipse-java-bin
@@ -110,11 +115,13 @@ java-environment-common
 java-runtime-common
 jdk-openjdk
 jmtpfs
+jp2a
 jq
 jre-openjdk
 jre-openjdk-headless
 jsoncpp
 jupyter-notebook
+k3b
 kdb
 kdeconnect
 kernelshark
@@ -155,7 +162,7 @@ mixxx
 mlocate
 mpc
 mpd
-mpv
+mpv-git
 mtpfs
 nano
 ncmpcpp
@@ -200,7 +207,6 @@ pulseaudio-alsa
 pulseaudio-bluetooth
 pulseaudio-jack
 pulsemixer
-python-language-server
 python-pip
 python-pyxdg
 qemu
@@ -290,6 +296,7 @@ vulkan-radeon
 vulkan-tools
 vulkan-validation-layers
 wd719x-firmware
+weka
 wireshark-qt
 woeusb
 wpa_supplicant

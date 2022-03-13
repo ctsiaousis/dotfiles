@@ -1,12 +1,12 @@
 # Profile file. Runs on login. Environmental variables are set here.
 
 # Adds `~/.local/bin` to $PATH
-export PATH="$HOME/.local/bin/:$PATH"
+export PATH="$HOME/.local/bin/:$HOME/.local/bin/statusbar:$PATH"
 
 # Default programs:
 export EDITOR="vim"
-export TERMINAL="urxvt"
-export Terminal="urxvt"
+export TERMINAL="st"
+export Terminal="st"
 export BROWSER="firefox"
 export READER="zathura"
 export FILE="ranger"

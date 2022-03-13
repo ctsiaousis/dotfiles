@@ -1,0 +1,14 @@
+#!/bin/sh
+
+source $HOME/.config/zsh/.zprofile
+xrandr --dpi 96		# Set DPI. User may want to use a larger number for larger screens.
+processgraph &			# set the background with the `setbg` script
+setxkbmap us,gr -option grp:alt_caps_toggle,grp_led:scroll &
+picom -b --experimental-backends
+
+autostart="mpd dunst unclutter pipewire dwmblocks"
+
+for program in $autostart; do
+	pidof -s "$program" || setsid -f "$program"
+done >/dev/null 2>&1
+

@@ -1,15 +1,17 @@
 abook
 aic94xx-firmware
 arc-icon-theme-git
+archiso-git
+atool
 awesome-git
 bibata-cursor-theme
 brave-bin
+colorpicker
 ebtables
 eclipse-java-bin
 findbrokenpkgs
 gotop-bin
 gphotofs
-gst-rtsp-server
 gstreamer0.10-base
 gstreamer0.10-base-plugins
 gstreamer0.10-ffmpeg
@@ -27,6 +29,7 @@ libnotify-id
 libxft-bgra-git
 light-git
 lightdm-webkit-theme-aether
+mpv-git
 ncurses5-compat-libs
 nerd-fonts-fantasque-sans-mono
 otf-gfs
@@ -57,6 +60,7 @@ urxvt-resize-font-git
 virtio-win
 vscodium-bin
 wd719x-firmware
+weka
 woeusb
 xidlehook
 xkblayout-state-git
